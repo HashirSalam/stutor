@@ -1,7 +1,9 @@
 var app = angular.module('stutor',
     [	
 		"ionic",
-        "stutor.login"
+        "stutor.login",
+        "stutor.home",
+        "stutor.register",
     ]
 );
 
@@ -9,13 +11,20 @@ app.config([
     '$stateProvider',
     '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
-		$stateProvider.state('stutor', {
-    url: '/stutor',
+		
+    $stateProvider
+
+  .state('stutor', {
+    url: '/side-menu21',
     templateUrl: 'templates/stutor.html',
     abstract:true
   })
-        $urlRouterProvider.otherwise('login');
+
+$urlRouterProvider.otherwise('/side-menu21/page1')
+
     }]);
+
+    
 
 app.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

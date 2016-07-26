@@ -4,16 +4,22 @@ app.config([
     '$stateProvider',
     '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
-        $stateProvider.state('home', {
-                url: '/home',
-                templateUrl: 'components/home/homeView.html',
-                controller: 'homeController'
-        });
+        $stateProvider.state('stutor.home', {
+            url: '/page1',
+            views: {
+                'side-menu21': {
+                    templateUrl:'components/home/homeView.html',
+                    controller: 'homeController'
+                }
+            }
+        })
     }
 ]);
 
+
 app.controller('homeController', ['$scope', 'auth', '$location',
     function ($scope, auth, $location) {
+        console.log("home c called");
         $scope.isLoggedIn = auth.isLoggedIn();
     }
 ]);
