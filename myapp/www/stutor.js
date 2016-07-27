@@ -24,7 +24,7 @@ $urlRouterProvider.otherwise('/side-menu21/page1')
 
     }]);
 
-    
+
 
 app.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -89,7 +89,7 @@ app.factory('auth', ['$http', '$window', function ($http, $window) {
     };
 
     auth.logIn = function (user) {
-        return $http.post('/login', user).success(function (data) {
+        return $http.post('http://192.168.183.101:3000/login', user).success(function (data) {
             auth.saveToken(data.token);
             auth.saveUserID(data.userId);
         });
@@ -103,7 +103,8 @@ app.factory('auth', ['$http', '$window', function ($http, $window) {
     return auth;
 }]);
 
-/*
+
+
 app.controller('SearchWidgetController', function ($location) {
     var controller = this;
     controller.search = {text: "", city: "all"};
@@ -112,4 +113,4 @@ app.controller('SearchWidgetController', function ($location) {
         $location.path("/search/" + search.text + "/" + search.city);
         controller.search.text = "dsada";
     }
-});*/
+});

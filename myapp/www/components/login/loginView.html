@@ -11,24 +11,26 @@
   <div class="container"> 
   
   
-    <div class="mt40 row">
+    <div class="mt40">
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <h5 class="heading5">login</h5>
         <div class="loginbox">
           <form name="loginForm" ng-submit="loginForm.$valid && logIn()" class="form-vertical" novalidate>
             <fieldset>
-              <div class="control-group">
-                <label  class="control-label">E-Mail Address:</label>
-                <div class="controls">
-                  <input type="email" ng-model="user.email" class="span3" required>
-                </div>
-              </div>
-              <div class="control-group">
-                <label  class="control-label">Password:</label>
-                <div class="controls">
-                  <input type="password" ng-model="user.password" class="span3" required>
-                </div>
-              </div>
+
+<div class="list">
+  
+  <label class="item item-input">
+    <span class="input-label">Email</span>
+    <input type="text" ng-model="user.email" placeholder="Email" required>
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Password</span>
+    <input type="password" ng-model="user.password" placeholder="Password" required>
+  </label>
+
+</div>
 
               <div ng-show="error" class="alert alert-danger">
                 <strong>Error!</strong> {{error}}
@@ -36,7 +38,7 @@
 
               <a class="orange" href="#/forgotpassword" >Forgot Password</a> <br>
               <br>
-              <button type="submit" class="btn btn-orange">Login</button>
+              <button type="submit" class="btn btn-orange button-full ">Login</button>
               <hr>
             </fieldset>
           </form>
@@ -59,7 +61,7 @@
           </ul>
           <br>
           <br>
-          <a  class="btn btn-orange" href="#/register">Continue</a> </div>
+          <a  class="btn btn-orange button-full "  ui-sref="stutor.register">Continue</a> </div> <!--href="#/side-menu21/page3"-->
       </div>
 	  
 	  </div>
