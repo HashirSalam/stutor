@@ -1,0 +1,118 @@
+﻿<ion-view title="Register" id="page3" style="" class="">
+  <ion-nav-title>
+    <!-- <img src="img/icon.png" width="30px" height="30px" > -->
+    <view-title><i class="icon ion-ios-compose"></i> Register</view-title>
+  </ion-nav-title>
+
+
+
+  <ion-content padding="true" class="has-header">
+    <div id="maincontainer">
+      <div class="container">
+
+        <ul class="breadcrumb">
+          <li> <a ui-sref="stutor.home">Home</a> </li>
+          <li class="active">Register</li>
+        </ul>
+        <div class="mt40">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5 class="heading5">Register</h5>
+            <div class="loginbox">
+              <form ng-submit="register()" class="form-vertical" novalidate>
+          
+
+                  <div class="list">
+
+                    <label class="item item-input item-stacked-label">
+                    <span class="input-label">Full Name</span>
+                    <input type="text" ng-model="user.name" placeholder="Full Name" required>
+                  </label>
+
+                    <label class="item item-input item-stacked-label">
+                    <span class="input-label">Email</span>
+                    <input type="email" ng-model="user.email" placeholder="Email" required>
+                  </label>
+
+                    <label class="item item-input item-stacked-label">
+                    <span class="input-label">Password</span>
+                    <input type="password" ng-model="user.password" placeholder="Password" required>
+                  </label>
+
+                    <label class="item item-input item-stacked-label">
+                    <span class="input-label">Confirm Password</span>
+                    <input type="password" ng-model="user.confirmPassword" placeholder="Confirm Password" required>
+                  </label>
+
+                    <div class="well">
+                      <label class="item item-input item-stacked-label">
+                    <span class="input-label">Date of Birth</span>
+                          <input type="text" id="datepicker" datepicker ng-model="user.dob" placeholder="Date of Birth" required>
+                  </label>
+                    </div>
+
+                    <label class="item item-input">
+                    <span class="input-label">You are :</span>
+                        <select ng-model="user.role"  required>
+                            <option value="teacher">Teacher</option>
+                            <option value="student">Student</option>
+                        </select>
+                  </label>
+
+
+
+
+                    <ion-checkbox ng-model="user.agreedOnTerms">I agree to Stutor <a href="#/terms"> Terms & Conditions</a></ion-checkbox>
+
+
+
+
+
+
+                  </div>
+
+
+
+
+
+
+
+                  <div class="errormsg alert" ng-show="error">
+                    <i class="fa fa-frown-o font36"></i>
+                    <strong>Error!</strong> {{error}}
+                  </div>
+
+                  <br>
+                  <button type="submit" class="btn btn-orange button-full ">Register</button>
+          
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+
+
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="loginbox">
+              <hr>
+              <h5 class="heading5"> Why Us</h5>
+              <p>By creating an account you will be able to find ads faster, be up to date with your account, and keep track
+                of the ads you have previously posted.</p>
+              <ul class="whyus">
+                <li><i class="fa  fa-magic"></i> <span class="direname">Easy to Understand</span> </li>
+                <li><i class="fa fa-arrow-right"></i> <span class="direname">Fast to Navigate</span> </li>
+                <li><i class="fa fa-th"></i> <span class="direname">Lot of Options</span> </li>
+                <li><i class="fa fa-search"></i><span class="direname">Quick Search</span> </li>
+              </ul>
+              <br>
+              <br>
+              <a href="#/login" class="btn btn-orange">Login</a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+
+</ion-view>

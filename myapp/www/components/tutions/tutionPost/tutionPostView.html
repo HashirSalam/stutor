@@ -1,0 +1,203 @@
+<ion-view title="Post Ad" id="page4" style="" class="">
+  <ion-nav-title>
+    <!-- <img src="img/icon.png" width="30px" height="30px" > -->
+    <view-title><i class="icon ion-ios-compose"></i> Post Ad</view-title>
+  </ion-nav-title>
+
+
+
+  <ion-content padding="true" class="has-header">
+
+
+<div id="maincontainer">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a>My Account</a></li>
+            <li class="active"> Post A Tution Ad</li>
+        </ul>
+        <a href="#/tutionPost" class="postadinner"><span> <i class="fa fa-pencil"></i> Post An Ad</span></a>
+        <div class="row mt40">
+            <!--  Container -->
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt40column">
+                <div class="">
+                    <h4 class="heading5"><span class="maintext"> Post a Tution Ad</span></h4>
+                    <form name="tutionPostForm" ng-submit="tutionPost()" class="form-horizontal mt20" novalidate>
+                        <div class="list">
+                            
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Title*</label>
+                                <div class="col-sm-6">
+                                    <input rows="6" class="form-control col-sm-6" ng-model="ad.title" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Description*</label>
+                                <div class="col-sm-6">
+                                    <textarea rows="6" class="form-control col-sm-6" ng-model="ad.description"
+                                              required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Looking For*</label>
+                                <div class="col-sm-6">
+                                    <select class="form-control col-sm-6" ng-model="ad.lookingFor" required>
+                                        <option value="students">Students</option>
+                                        <option value="tutors">Tutors</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Courses/Subjects*</label>
+                                <tags-input class="tags col-sm-6" ng-model="ad.courses" placeholder="Add Courses or Subjects"
+                                            required></tags-input>
+                            </div>
+                            <div class="form-group col-sm-offset-0 col-sm-12">
+                                
+                                 Home Tution  
+                                <div class="checkbox">
+                                 <input type="checkbox" ng-model="ad.tutionMethod.homeTution">   
+                                 </div>
+                                 <hr>
+                                Private Tution  
+                                <div class="checkbox">
+                                 <input type="checkbox" ng-model="ad.tutionMethod.privateTution">   
+                                 </div>
+                                 <hr>   
+                                 Group Tution  
+                                <div class="checkbox">
+                                 <input type="checkbox" ng-model="ad.tutionMethod.groupTution">   
+                                 </div>
+                                 <hr>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Classes:</label>
+                                <tags-input class="tags col-sm-6" ng-model="ad.classes"
+                                            placeholder="Add Classes" ></tags-input>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Avalibility:</label>
+                                <div class="col-sm-2">
+                                    <select name="category" class="form-control" id="startingTime"
+                                            ng-model="ad.availability.stime">
+                                        <option value="">Starting Time</option>
+                                        <optgroup label="">
+                                            <option value="1">1 am</option>
+                                            <option value="2">2 am</option>
+                                            <option value="3">3 am</option>
+                                            <option value="4">4 am</option>
+                                            <option value="5">5 am</option>
+                                            <option value="6">6 am</option>
+                                            <option value="7">7 am</option>
+                                            <option value="8">8 am</option>
+                                            <option value="9">9 am</option>
+                                            <option value="10">10 am</option>
+                                            <option value="11">11 am</option>
+                                            <option value="0">12 am</option>
+
+                                            <option value="13">1 pm</option>
+                                            <option value="14">2 pm</option>
+                                            <option value="15">3 pm</option>
+                                            <option value="16">4 pm</option>
+                                            <option value="17">5 pm</option>
+                                            <option value="18">6 pm</option>
+                                            <option value="19">7 pm</option>
+                                            <option value="20">8 pm</option>
+                                            <option value="21">9 pm</option>
+                                            <option value="22">10 pm</option>
+                                            <option value="23">11 pm</option>
+                                            <option value="12">12 pm</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+
+                                <label class="col-sm-1 control-label">TO</label>
+
+                                <div class="col-sm-2">
+                                    <select name="category" class="form-control" id="endingTime"
+                                            ng-model="ad.availability.etime">
+                                        <option value="">Ending Time</option>
+                                        <optgroup label="">
+                                            <option value="1">1 am</option>
+                                            <option value="2">2 am</option>
+                                            <option value="3">3 am</option>
+                                            <option value="4">4 am</option>
+                                            <option value="5">5 am</option>
+                                            <option value="6">6 am</option>
+                                            <option value="7">7 am</option>
+                                            <option value="8">8 am</option>
+                                            <option value="9">9 am</option>
+                                            <option value="10">10 am</option>
+                                            <option value="11">11 am</option>
+                                            <option value="0">12 am</option>
+
+                                            <option value="13">1 pm</option>
+                                            <option value="14">2 pm</option>
+                                            <option value="15">3 pm</option>
+                                            <option value="16">4 pm</option>
+                                            <option value="17">5 pm</option>
+                                            <option value="18">6 pm</option>
+                                            <option value="19">7 pm</option>
+                                            <option value="20">8 pm</option>
+                                            <option value="21">9 pm</option>
+                                            <option value="22">10 pm</option>
+                                            <option value="23">11 pm</option>
+                                            <option value="12">12 pm</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Rates*</label>
+                                <div class="col-sm-6">
+                                    <input rows="6" class="form-control col-sm-6" ng-model="ad.rate" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-offset-0 col-sm-12">
+                                Rates Negotiable  
+                                <div class="checkbox">
+                                 <input type="checkbox" ng-model="ad.negotiable">   
+                                 </div>
+                                 <br>
+                            </div>
+                            <br><br><br>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Upload photo</label>
+                                <div class="col-sm-6">
+                                    <input type="file" ng-model="adImg"
+                                           ngf-select
+                                           ngf-max-files="1"
+                                           ngf-pattern="'image/*'"
+                                           ngf-accept="'image/*'"
+                                    >
+                                </div>
+                            </div>
+                            <div class="col-sm-offset-2 col-sm-12">
+                                I agree to Stutor terms and conditions.
+                                <div class="checkbox">
+                                 <input type="checkbox" ng-model="ad.agreedOnTerms" >   
+                                 </div>
+                                 <br>
+                            </div>
+                            <div class="errormsg alert col-sm-12" ng-show="error">
+                                <strong>Error!</strong> {{error}}
+                            </div>
+
+                            <div class="col-sm-offset-2 col-sm-10 mt20">
+                              
+                                 <button type="submit" class="btn btn-orange button-full ">Submit</button>
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+</div>
+
+  </ion-content>
+
+</ion-view>

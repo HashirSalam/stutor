@@ -1,0 +1,7 @@
+﻿{
+  "name": "example-checkbox-input-directive",
+  "files": [
+    "index-production.html",
+    "protractor.js"
+  ]
+}

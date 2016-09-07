@@ -1,0 +1,7 @@
+﻿{
+  "name": "example-ngPatternDirective",
+  "files": [
+    "index-production.html",
+    "protractor.js"
+  ]
+}

@@ -1,0 +1,96 @@
+<div id="maincontainer">
+    <div class="container">
+        <!-- Product Details-->
+        <div class="row mt40">
+            <!-- Left Image-->
+            <div class="col-lg-3 col-md-3 col-xs-12 col-sm-12">
+                <ul class="thumbnails mainimage clearfix">
+                    <li> <img class="my-foto-container" src={{ad.imageUrl}} /> </li>
+                </ul>
+
+            </div>
+            <!-- Right Details-->
+            <div class="col-lg-9 col-md-9 col-xs-12 col-sm-12 mt40column">
+                <div class="clearfix">
+                    <div class="pull-left">
+                        <h2>{{ad.title}}</h2>
+                    </div>
+                </div>
+
+                <!-- Product Description tab & comments-->
+                <div class="productdesc">
+                    <ul class="nav nav-tabs" id="myTab">
+                        <a class="pull-right btn btn-orange btn-sm mbtn" data-target="#info" data-toggle="tab"> Contact </a>
+                        <li class="active"><a data-target="#description" data-toggle="tab">Description</a> </li>
+                        <li><a data-target="#info" data-toggle="tab">Info</a> </li>
+                        <li><a id="locationTab" data-target="#location" data-toggle="tab">Location</a> </li>
+                    </ul>
+
+                    <div class="tab-content">
+
+                        <div class="tab-pane active" id="description">
+                            {{ad.description}} <br><br>
+                            <p>
+                                <h5 style="display: inline;">Courses/Subjects: </h5>
+                                <span style="margin-left: 5px;" class="tags" ng-repeat="x in ad.courses">{{x.text}}</span>
+                            </p>
+                            <p>
+                                <h5 style="display: inline;">Classes: </h5>
+                                <span style="margin-left: 5px;" class="tags" ng-repeat="x in ad.classes">{{x.text}}</span>
+                            </p>
+                            <p>
+                            <h5 style="display: inline;">Looking For: </h5> <span class="tags">{{ad.lookingFor}}</span></p>
+                            <p>
+                            <p>
+                                <h5 style="display: inline;">Availibility: </h5> {{ad.availability | showAvailabilityFilter}} </p>
+                            <p>
+                                <h5 style="display: inline;">Method: </h5>
+                                <span style="margin-left: 5px;" class="tags" ng-show="ad.tutionMethod.privateTution">Private Tution</span>
+                                <span style="margin-left: 5px;" class="tags" ng-show="ad.tutionMethod.groupTution">Group Tution</span>
+                                <span style="margin-left: 5px;" class="tags" ng-show="ad.tutionMethod.homeTution">Home Tution</span>
+                            </p>
+                            <p>
+                                <h5 style="display: inline;">Location: </h5> {{ad.postedBy.geoLocation.address}}
+                            </p>
+                            <p>
+                                <h4 style="display: inline;">Charges: </h4> {{ad.rate}}  <h5 style="display: inline;">( {{ad.negotiable}} )</h5> 
+                            </p>
+                            
+                        </div>
+
+                        <div class="tab-pane" id="info">
+                            <div class="searchresult list " style="display: block">
+                                <h5 class="fa fa-phone mgr-10 profile-icon"> Contact</h5>
+                                <a class="pull-right btn btn-orange btn-lg mbtn" ng-click="viewProfile()"> View Profile</a>
+                                <p><strong>Name : </strong> {{ad.postedBy.name}} </p>
+                                <p><strong>Contact Number : </strong> {{ad.postedBy.contact}} </p>
+                            </div>
+                            <div class="searchresult list " style="display: block;">
+                                <h4 class="fa fa-thumbs-up mgr-10 profile-icon"> User Ratings: </h4>
+                                <ul class="list-unstyled">
+                                    <li style="background-color: #fff;">
+                                        <ng-rating ng-model="ad.postedBy.rating"
+                                                   icon-class="'fa fa-mortar-board'"
+                                                   editable="false"
+                                                   stars-count="5"
+                                                   based-on="5"
+                                                   show-grade="true">
+                                        </ng-rating>
+                                        <!--<p>{{ rating.rating }}</p> -->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="location">
+                            <div id="map-canvas" style="width: 100%;height: 300px;"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

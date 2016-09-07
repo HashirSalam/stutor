@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    
+    
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!--<link href='http://www.google.com/fonts#UsePlace:use/Collection:Open+Sans:400,300,400italic,600,700,800,800italic' rel='stylesheet' type='text/css'>-->
+    <link href="css/color1.css" rel="stylesheet" media="screen" id="color">
+    <link rel="stylesheet" type="text/css" href="css/jquery.tagsinput.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/star.css">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <link href="css/custom.css" rel="stylesheet" media="screen">
+	
+	
+
+    <style type="text/css">
+      .platform-ios .manual-ios-statusbar-padding{
+        padding-top:20px;
+      }
+      .manual-remove-top-padding{
+        padding-top:0px; 
+      }
+      .manual-remove-top-padding .scroll{
+        padding-top:0px !important;
+      }
+      ion-list.manual-list-fullwidth div.list, .list.card.manual-card-fullwidth {
+        margin-left:-10px;
+        margin-right:-10px;
+      }
+      ion-list.manual-list-fullwidth div.list > .item, .list.card.manual-card-fullwidth > .item {
+        border-radius:0px;
+        border-left:0px;
+        border-right: 0px;
+      }
+    </style>
+	
+	<script src="js/jquery.js"></script>
+  <script src="js/jquery-ui.js"></script>
+
+  <!--IMPORTANT INCLUDE CONTROLLERS HERE-->
+  <script src="stutor.js"></script>
+  <script src="components/login/loginController.js"></script>
+  <script src="components/home/homeController.js"></script>
+  <script src="components/register/registerController.js"></script>
+
+    <!-- Only required for Tab projects w/ pages in multiple tabs 
+    <script src="lib/ionicuirouter/ionicUIRouter.js"></script>
+    -->
+
+  </head>
+  
+  <body ng-app="stutor" animation="slide-left-right-ios7" class="platform-windows platform-cordova platform-webview">
+  <div>
+    <div>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button class="button-icon icon ion-ios-arrow-back">Back</ion-nav-back-button>
+        </ion-nav-bar>
+
+        <ion-nav-view><!--MAIN WINDOW-->
+        </ion-nav-view>
+    </div>
+</div>
+
+
+<script src="js/jquery-migrate-1.2.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/zoomsl-3.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/jquery.tweet.js"></script>
+<script type="text/javascript" src="js/jquery.countdown.js"></script>
+<script type="text/javascript" src="js/socialstream.jquery.js"></script>
+<script type="text/javascript" src="js/jquery.sparkline.min.js"></script>
+<script type="text/javascript" src="js/jqcloud-1.0.4.js"></script>
+<script type="text/javascript" src="js/retina-1.1.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.tagsinput.js"></script>
+<script src="js/custom.js"></script>
+  </body>
+</html>

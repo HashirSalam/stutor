@@ -1,0 +1,7 @@
+﻿{
+  "name": "example-ngRequiredDirective",
+  "files": [
+    "index-production.html",
+    "protractor.js"
+  ]
+}

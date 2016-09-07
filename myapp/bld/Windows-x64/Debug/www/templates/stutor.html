@@ -1,0 +1,54 @@
+﻿<ion-side-menus enable-menu-with-back-views="true">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-assertive"> <!--This is the main bar--> 
+            <ion-nav-back-button></ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="side-menu21"></ion-nav-view>
+    </ion-side-menu-content>
+	
+    <ion-side-menu side="left" id="side-menu21" style="">
+        <ion-header-bar class="bar-stable" style="background-color:red;">
+            <div class="title">Stutor</div>
+        </ion-header-bar>
+        <ion-content padding="false" class="side-menu-right has-header">
+			<div class="">
+                <img src="img/stutor-logo.png" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+            </div>
+            <ion-list id="stutor-list1" class=" ">
+                <ion-item class="item-icon-left assertive  " id="stutor-list-item1" ui-sref="stutor.home" menu-close="">
+                    <i class="icon ion-android-home"></i>Home</ion-item>
+                <ion-item class="item-icon-left assertive  " id="stutor-list-item2" ui-sref="stutor.login" menu-close="">
+                    <i class="icon ion-key"></i>Login</ion-item>
+                <ion-item class="item-icon-left assertive  " id="stutor-list-item3" ui-sref="stutor.register" menu-close="">
+                    <i class="icon ion-ios-compose"></i>Register</ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
+
+<!--<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button></ion-nav-back-button>
+            <ion-nav-buttons side="right">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="right"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="side-menu21"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="right" id="side-menu21">
+        <ion-header-bar class="bar-stable">
+            <div class="title">Menu</div>
+        </ion-header-bar>
+        <ion-content padding="false" class="side-menu-right has-header">
+            <ion-list id="menu-null" class=" ">
+                <ion-item id="menu-list-item1" ui-sref="menu.home" menu-close="" class="  ">Home</ion-item>
+                <ion-item id="menu-list-item2" ui-sref="menu.cart" menu-close="" class="  ">Cart</ion-item>
+                <ion-item id="menu-list-item3" ui-sref="menu.cloud" menu-close="" class="  ">Cloud</ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>-->

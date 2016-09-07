@@ -1,0 +1,7 @@
+﻿{
+  "name": "example-example95",
+  "files": [
+    "index-production.html",
+    "protractor.js"
+  ]
+}

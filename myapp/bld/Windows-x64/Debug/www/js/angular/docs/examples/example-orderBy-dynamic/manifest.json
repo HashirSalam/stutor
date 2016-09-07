@@ -1,0 +1,9 @@
+﻿{
+  "name": "example-orderBy-dynamic",
+  "files": [
+    "index-production.html",
+    "script.js",
+    "style.css",
+    "protractor.js"
+  ]
+}

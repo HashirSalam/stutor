@@ -1,0 +1,1540 @@
+﻿<div id="maincontainer">
+    <!-- Slider Start-->
+    <section id="search">
+    </section>
+
+    <!-- Directory Listing-->
+    <div class="container mt40">
+        <div class="teacherProfilecontainer">
+            <div class="row">
+                <div class="well profile col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="col-sm-12 col-md-12">
+                        <div class="col-xs-12 col-sm-4 col-md-3">
+                            <div class="col-xs-12">
+                                <img src="img/pic.png" class="img-square img-fluid" style="width: 100%;">
+                            </div>
+                            <div class="col-xs-12">
+                                <br>
+                                <h4 style="display:inline" class="mgbt-xs-15 font-semibold">
+                                    <i class="fa fa-user mgr-10 profile-icon"></i>
+                                    PERSONAL
+                                </h4><button type="button" id ="editper" class="btn btn-primary btn-xs fa fa-pencil-square-o" data-toggle="modal" data-target="#myModal3"></button>
+                                <br>
+
+                                <!-- Trigger the modal with a button -->
+
+
+                                <!-- Modal -->
+                                <div id="myModal3" class="modal fade" role="dialog">
+                                    <div class="modal-dialog modal-md">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">Personal Information</h4>
+                                            </div>
+
+                                            <div class="modal-body bg-warning">
+
+                                                <form class="form-horizontal" role="form">
+
+                                                    <div class="container">
+
+                                                        <div class="form-group">
+                                                            <label for="email" class="control-label">Gender:&nbsp;&nbsp;&nbsp;</label>
+                                                            <input type="text" class="" style="width:40%;" id="email" >
+                                                        </div>
+
+
+                                                        <div class="form-group">
+                                                            <label for="pwd"   class="control-label" >Age:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                                            <input type="number" class="" style="width:40%;" id="pwd" >
+                                                        </div>
+
+
+                                                        <div class="form-group">
+                                                            <label for="email" class="control-label">Charges:&nbsp;&nbsp;</label>
+                                                            <input type="text" class="" style="width:40%;" id="email" >
+                                                        </div>
+
+
+                                                        <div class="form-group">
+                                                            <label for="pwd"   class="control-label" >Availibility:</label>
+                                                            <input type="number" class="" style="width:40%;" id="pwd" >
+                                                        </div>
+
+
+
+                                                        <div class="form-group">
+                                                            <label for="pwd"   class="control-label" >Contact #:</label>
+                                                            <input type="number" class="" style="width:40%;" id="pwd" >
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label for="email" class="control-label">Location:&nbsp;&nbsp;</label>
+                                                            <input type="text" class="" style="width:40%;" id="email" >
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label for="email" class="control-label">Address:&nbsp;&nbsp;</label>
+                                                            <textarea name="" id="address"  style="width:40%;" rows="2"></textarea>
+                                                        </div>
+
+
+                                                        <div class="form-group" style="width:47%;">
+                                                            <label for="tags_1" class="control-label pull-left">Languages:</label>
+                                                            <input id="tags_1" type="text"  class="tags" value="English,Urdu" />
+                                                        </div>
+
+
+
+
+                                                    </div>
+
+                                                </form>
+
+                                            </div>
+
+
+
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-info" data-dismiss="modal">Save</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+
+                                <p><strong>Gender: </strong> Female </p>
+                                <p><strong>Age: </strong> 25 Years </p>
+                                <p><strong>Availibility : </strong> 9am to 6pm. </p>
+                                <p><strong>Charges : </strong> 1000/Course </p>
+                                <p><strong>Languages : </strong> English,Urdu. </p>
+                                <p><strong>Contact Number : </strong> 0333-1234567. </p>
+                                <p><strong>Email : </strong> some@email.com </p>
+                                <p><strong>Location: </strong> Islamabad </p>
+                                <p><strong>Address: </strong> House # x Street # y Sector G-13/1, Islamabad, Pakistan
+                                    <br><span><a href="#">(Show On Map)</a></span>
+                                </p>
+                            </div>
+                            <div class="col-xs-12">
+                                <br>
+                                <h4><i class="fa fa-star mgr-10 profile-icon"></i> RATINGS</h4>
+
+                                <p>
+                                    Rating:
+                                  <span class="starRating">
+                                      <input id="rating5" type="radio" name="rating" value="5">
+                                      <label for="rating5">5</label>
+                                      <input id="rating4" type="radio" name="rating" value="4">
+                                      <label for="rating4">4</label>
+                                      <input id="rating3" type="radio" name="rating" value="3" checked>
+                                      <label for="rating3">3</label>
+                                      <input id="rating2" type="radio" name="rating" value="2">
+                                      <label for="rating2">2</label>
+                                      <input id="rating1" type="radio" name="rating" value="1">
+                                      <label for="rating1">1</label>
+                                  </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-md-9 ">
+                            <div class="col-sm-12">
+                                <div ng-show="!EditProfileCtrl.editOptions.editname">
+                                    <h2 style="display:inline;">{{EditProfileCtrl.user.name}}</h2>
+                                    <button type="button" ng-click="EditProfileCtrl.editOptions.setEditName(true)" class="btn btn-primary btn-xs fa fa-pencil-square-o"></button>
+                                </div>
+                                <div ng-show="EditProfileCtrl.editOptions.editname">
+                                    <h2><input class ="col-sm-12" ng-model="EditProfileCtrl.user.name" type="text"/></h2>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button type="button" ng-click="EditProfileCtrl.updateUserProfile()" class="btn btn-success btn-xs fa fa-check"></button>&nbsp;
+                                    <button type="button" ng-click="EditProfileCtrl.editOptions.setEditName(false)" class="btn btn-danger btn-xs fa fa-remove"></button>
+                                    <br><br>
+                                </div>
+                            </div>
+
+                            <!--Philosophy -->
+                            <br><br><br><br>
+                            <div class="Philosophy col-sm-12">
+                                <h4 style="display:inline;"><i class="fa fa-info-circle mgr-10 profile-icon"></i> SUMMARY</h4>
+                                <div ng-show="!EditProfileCtrl.editOptions.editsummary">
+                                    <p style="display:inline;">
+                                        {{EditProfileCtrl.user.summary}}
+                                    </p>
+                                    <button type="button" ng-click="EditProfileCtrl.editOptions.setEditSummary(true)" class="btn btn-primary btn-xs fa fa-pencil-square-o"></button>
+                                </div>
+                                <div ng-show="EditProfileCtrl.editOptions.editsummary">
+                                    <textarea class ="col-sm-12" type="textarea" ng-model="EditProfileCtrl.user.summary"> </textarea>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button type="button" ng-click="EditProfileCtrl.updateUserProfile()"  class="btn btn-success btn-xs fa fa-check"></button>&nbsp;
+                                    <button type="button" ng-click="EditProfileCtrl.editOptions.setEditSummary(false)"  class="btn btn-danger btn-xs fa fa-remove"></button>
+                                    <br><br>
+                                </div>
+                            </div>
+
+                            <!-- EDUCATION -->
+                            <div class="col-xs-12 col-sm-12 col-md-6">
+                                <br>
+                                <h4 style="display:inline" class="mgbt-xs-15 font-semibold"><i class="fa fa-trophy mgr-10 profile-icon"></i>
+                                    EDUCATION</h4>&nbsp;<button type="button" id ="editedu" class="btn btn-primary btn-xs fa fa-pencil-square-o" data-toggle="modal" data-target="#educationModal"></button>
+
+                                <br><br>
+                                <!-- ///////////////////// Start of  MODEL //////////////////////// -->
+
+                                <!-- Trigger the modal with a button -->
+                                <!-- Modal -->
+                                <div id="educationModal" class="modal fade" role="dialog">
+                                    <div class="modal-dialog modal-md">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">Education</h4>
+                                            </div>
+
+                                            <div class="modal-body bg-warning">
+                                                <div ng-repeat="x in EditProfileCtrl.user.education">
+                                                    <div class="collection">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" ng-model="x.name">
+                                                        </div>
+                                                        <div class ="row">
+
+                                                            <label class="col-sm-2 col-xs-2" >Start </label>
+
+                                                            <div class="dropdown col-sm-4 col-xs-4" style = "display:inline-block;">
+                                                                <select class="" style="min-width: 10px;">
+                                                                    <option value="volvo">Month</option>
+                                                                    <option value="saab">Jan</option>
+                                                                    <option value="opel">Feb</option>
+                                                                    <option value="audi">Mar</option>
+                                                                    <option value="audi">Apr</option>
+                                                                    <option value="audi">May</option>
+                                                                    <option value="audi">Jun</option>
+                                                                    <option value="audi">Jul</option>
+                                                                    <option value="audi">Aug</option>
+                                                                    <option value="audi">Sep</option>
+                                                                    <option value="audi">Oct</option>
+                                                                    <option value="audi">Nov</option>
+                                                                    <option value="audi">Dec</option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="dropdown col-sm-4 col-xs-4" style = "display:inline-block;">
+                                                                <select id="year1" name="year1" class=" " style="min-width: 10px;" >
+                                                                    <option value="">year</option>
+                                                                    <option value="2006">2006</option>
+                                                                    <option value="2005">2005</option>
+                                                                    <option value="2004">2004</option>
+                                                                    <option value="2003">2003</option>
+                                                                    <option value="2002">2002</option>
+                                                                    <option value="2001">2001</option>
+                                                                    <option value="2000">2000</option>
+                                                                    <option value="1999">1999</option>
+                                                                    <option value="1998">1998</option>
+                                                                    <option value="1997">1997</option>
+                                                                    <option value="1996">1996</option>
+                                                                    <option value="1995">1995</option>
+                                                                    <option value="1994">1994</option>
+                                                                    <option value="1993">1993</option>
+                                                                    <option value="1992">1992</option>
+                                                                    <option value="1991">1991</option>
+                                                                    <option value="1990">1990</option>
+                                                                    <option value="1989">1989</option>
+                                                                    <option value="1988">1988</option>
+                                                                    <option value="1987">1987</option>
+                                                                    <option value="1986">1986</option>
+                                                                    <option value="1985">1985</option>
+                                                                    <option value="1984">1984</option>
+                                                                    <option value="1983">1983</option>
+                                                                    <option value="1982">1982</option>
+                                                                    <option value="1981">1981</option>
+                                                                    <option value="1980">1980</option>
+                                                                    <option value="1979">1979</option>
+                                                                    <option value="1978">1978</option>
+                                                                    <option value="1977">1977</option>
+                                                                    <option value="1976">1976</option>
+                                                                    <option value="1975">1975</option>
+                                                                    <option value="1974">1974</option>
+                                                                    <option value="1973">1973</option>
+                                                                    <option value="1972">1972</option>
+                                                                    <option value="1971">1971</option>
+                                                                    <option value="1970">1970</option>
+                                                                    <option value="1969">1969</option>
+                                                                    <option value="1968">1968</option>
+                                                                    <option value="1967">1967</option>
+                                                                    <option value="1966">1966</option>
+                                                                    <option value="1965">1965</option>
+                                                                    <option value="1964">1964</option>
+                                                                    <option value="1963">1963</option>
+                                                                    <option value="1962">1962</option>
+                                                                    <option value="1961">1961</option>
+                                                                    <option value="1960">1960</option>
+                                                                    <option value="1959">1959</option>
+                                                                    <option value="1958">1958</option>
+                                                                    <option value="1957">1957</option>
+                                                                    <option value="1956">1956</option>
+                                                                    <option value="1955">1955</option>
+                                                                    <option value="1954">1954</option>
+                                                                    <option value="1953">1953</option>
+                                                                    <option value="1952">1952</option>
+                                                                    <option value="1951">1951</option>
+                                                                    <option value="1950">1950</option>
+                                                                    <option value="1949">1949</option>
+                                                                    <option value="1948">1948</option>
+                                                                    <option value="1947">1947</option>
+                                                                    <option value="1946">1946</option>
+                                                                    <option value="1945">1945</option>
+                                                                    <option value="1944">1944</option>
+                                                                    <option value="1943">1943</option>
+                                                                    <option value="1942">1942</option>
+                                                                    <option value="1941">1941</option>
+                                                                    <option value="1940">1940</option>
+                                                                    <option value="1939">1939</option>
+                                                                    <option value="1938">1938</option>
+                                                                    <option value="1937">1937</option>
+                                                                    <option value="1936">1936</option>
+                                                                    <option value="1935">1935</option>
+                                                                    <option value="1934">1934</option>
+                                                                    <option value="1933">1933</option>
+                                                                    <option value="1932">1932</option>
+                                                                    <option value="1931">1931</option>
+                                                                    <option value="1930">1930</option>
+                                                                    <option value="1929">1929</option>
+                                                                    <option value="1928">1928</option>
+                                                                    <option value="1927">1927</option>
+                                                                    <option value="1926">1926</option>
+                                                                    <option value="1925">1925</option>
+                                                                    <option value="1924">1924</option>
+                                                                    <option value="1923">1923</option>
+                                                                    <option value="1922">1922</option>
+                                                                    <option value="1921">1921</option>
+                                                                    <option value="1920">1920</option>
+                                                                    <option value="1919">1919</option>
+                                                                    <option value="1918">1918</option>
+                                                                    <option value="1917">1917</option>
+                                                                    <option value="1916">1916</option>
+                                                                    <option value="1915">1915</option>
+                                                                    <option value="1914">1914</option>
+                                                                    <option value="1913">1913</option>
+                                                                    <option value="1912">1912</option>
+                                                                    <option value="1911">1911</option>
+                                                                    <option value="1910">1910</option>
+                                                                    <option value="1909">1909</option>
+                                                                    <option value="1908">1908</option>
+                                                                    <option value="1907">1907</option>
+                                                                    <option value="1906">1906</option>
+                                                                    <option value="1905">1905</option>
+                                                                    <option value="1904">1904</option>
+                                                                    <option value="1903">1903</option>
+                                                                    <option value="1902">1902</option>
+                                                                    <option value="1901">1901</option>
+                                                                    <option value="1900">1900</option>
+                                                                </select>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class ="row erow">
+
+                                                            <label class="col-sm-2 col-xs-2" >End </label>
+
+
+                                                            <div class="dropdown col-sm-4 col-xs-4" style = "display:inline-block;">
+                                                                <select class="" style="min-width: 10px;">
+                                                                    <option value="volvo">Month</option>
+                                                                    <option value="saab">Jan</option>
+                                                                    <option value="opel">Feb</option>
+                                                                    <option value="audi">Mar</option>
+                                                                    <option value="audi">Apr</option>
+                                                                    <option value="audi">May</option>
+                                                                    <option value="audi">Jun</option>
+                                                                    <option value="audi">Jul</option>
+                                                                    <option value="audi">Aug</option>
+                                                                    <option value="audi">Sep</option>
+                                                                    <option value="audi">Oct</option>
+                                                                    <option value="audi">Nov</option>
+                                                                    <option value="audi">Dec</option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="dropdown col-sm-4 col-xs-4" style = "display:inline-block; ">
+                                                                <select id="year2" name="year2" class=""     style="min-width: 10px;" >
+                                                                    <option value="">year</option>
+                                                                    <option value="2006">2006</option>
+                                                                    <option value="2005">2005</option>
+                                                                    <option value="2004">2004</option>
+                                                                    <option value="2003">2003</option>
+                                                                    <option value="2002">2002</option>
+                                                                    <option value="2001">2001</option>
+                                                                    <option value="2000">2000</option>
+                                                                    <option value="1999">1999</option>
+                                                                    <option value="1998">1998</option>
+                                                                    <option value="1997">1997</option>
+                                                                    <option value="1996">1996</option>
+                                                                    <option value="1995">1995</option>
+                                                                    <option value="1994">1994</option>
+                                                                    <option value="1993">1993</option>
+                                                                    <option value="1992">1992</option>
+                                                                    <option value="1991">1991</option>
+                                                                    <option value="1990">1990</option>
+                                                                    <option value="1989">1989</option>
+                                                                    <option value="1988">1988</option>
+                                                                    <option value="1987">1987</option>
+                                                                    <option value="1986">1986</option>
+                                                                    <option value="1985">1985</option>
+                                                                    <option value="1984">1984</option>
+                                                                    <option value="1983">1983</option>
+                                                                    <option value="1982">1982</option>
+                                                                    <option value="1981">1981</option>
+                                                                    <option value="1980">1980</option>
+                                                                    <option value="1979">1979</option>
+                                                                    <option value="1978">1978</option>
+                                                                    <option value="1977">1977</option>
+                                                                    <option value="1976">1976</option>
+                                                                    <option value="1975">1975</option>
+                                                                    <option value="1974">1974</option>
+                                                                    <option value="1973">1973</option>
+                                                                    <option value="1972">1972</option>
+                                                                    <option value="1971">1971</option>
+                                                                    <option value="1970">1970</option>
+                                                                    <option value="1969">1969</option>
+                                                                    <option value="1968">1968</option>
+                                                                    <option value="1967">1967</option>
+                                                                    <option value="1966">1966</option>
+                                                                    <option value="1965">1965</option>
+                                                                    <option value="1964">1964</option>
+                                                                    <option value="1963">1963</option>
+                                                                    <option value="1962">1962</option>
+                                                                    <option value="1961">1961</option>
+                                                                    <option value="1960">1960</option>
+                                                                    <option value="1959">1959</option>
+                                                                    <option value="1958">1958</option>
+                                                                    <option value="1957">1957</option>
+                                                                    <option value="1956">1956</option>
+                                                                    <option value="1955">1955</option>
+                                                                    <option value="1954">1954</option>
+                                                                    <option value="1953">1953</option>
+                                                                    <option value="1952">1952</option>
+                                                                    <option value="1951">1951</option>
+                                                                    <option value="1950">1950</option>
+                                                                    <option value="1949">1949</option>
+                                                                    <option value="1948">1948</option>
+                                                                    <option value="1947">1947</option>
+                                                                    <option value="1946">1946</option>
+                                                                    <option value="1945">1945</option>
+                                                                    <option value="1944">1944</option>
+                                                                    <option value="1943">1943</option>
+                                                                    <option value="1942">1942</option>
+                                                                    <option value="1941">1941</option>
+                                                                    <option value="1940">1940</option>
+                                                                    <option value="1939">1939</option>
+                                                                    <option value="1938">1938</option>
+                                                                    <option value="1937">1937</option>
+                                                                    <option value="1936">1936</option>
+                                                                    <option value="1935">1935</option>
+                                                                    <option value="1934">1934</option>
+                                                                    <option value="1933">1933</option>
+                                                                    <option value="1932">1932</option>
+                                                                    <option value="1931">1931</option>
+                                                                    <option value="1930">1930</option>
+                                                                    <option value="1929">1929</option>
+                                                                    <option value="1928">1928</option>
+                                                                    <option value="1927">1927</option>
+                                                                    <option value="1926">1926</option>
+                                                                    <option value="1925">1925</option>
+                                                                    <option value="1924">1924</option>
+                                                                    <option value="1923">1923</option>
+                                                                    <option value="1922">1922</option>
+                                                                    <option value="1921">1921</option>
+                                                                    <option value="1920">1920</option>
+                                                                    <option value="1919">1919</option>
+                                                                    <option value="1918">1918</option>
+                                                                    <option value="1917">1917</option>
+                                                                    <option value="1916">1916</option>
+                                                                    <option value="1915">1915</option>
+                                                                    <option value="1914">1914</option>
+                                                                    <option value="1913">1913</option>
+                                                                    <option value="1912">1912</option>
+                                                                    <option value="1911">1911</option>
+                                                                    <option value="1910">1910</option>
+                                                                    <option value="1909">1909</option>
+                                                                    <option value="1908">1908</option>
+                                                                    <option value="1907">1907</option>
+                                                                    <option value="1906">1906</option>
+                                                                    <option value="1905">1905</option>
+                                                                    <option value="1904">1904</option>
+                                                                    <option value="1903">1903</option>
+                                                                    <option value="1902">1902</option>
+                                                                    <option value="1901">1901</option>
+                                                                    <option value="1900">1900</option>
+                                                                </select>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="pull-right">
+                                                            <label><input type="checkbox" value="ongoing">Ongoing</label>
+                                                        </div>
+
+                                                    </div>
+                                                    <br><hr>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" ng-click="EditProfileCtrl.resetUserLocal()" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-info" ng-click="EditProfileCtrl.editOptions.saveEducation()">Save</button>
+                                                <button type="button" class="btn btn-default pull-left" ng-click="EditProfileCtrl.editOptions.addEducation()">+</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- ///////////////////// END OF MODEL //////////////////////// -->
+
+                                <div class="content-list content-menu">
+                                    <ul class="list-wrapper">
+                                        <li class="mgbt-xs-10 ls" ng-repeat="x in EditProfileCtrl.user.education">
+                                            <span class="menu-icon vd_green">
+                                                <i class="fa  fa-circle-o"></i>
+                                            </span>
+                                            <span class="menu-text">
+                                                {{x.name}}
+                                                <br>
+                                                <span class="menu-info">
+                                                    <span class="menu-date">
+                                                        ({{x.startDate}} ~ {{x.endDate}})
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!--Experience -->
+                            <div class="col-xs-12 col-sm-12 col-md-6">
+                                <br>
+                                <h4 style="display:inline" class="mgbt-xs-15 font-semibold"><i class="fa fa-file-text-o mgr-10 profile-icon"></i>
+                                    EXPERIENCE</h4>
+                                <!-- Trigger the modal with a button -->
+                                <button type="button" id ="editexp" class="btn btn-primary btn-xs fa fa-pencil-square-o" data-toggle="modal" data-target="#myModal2"></button>
+
+                                <br><br>
+                                <!-- ///////////////////// Start of  MODEL //////////////////////// -->
+
+                                <!-- Modal -->
+                                <div id="myModal2" class="modal fade" role="dialog">
+                                    <div class="modal-dialog modal-sm">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">Experience</h4>
+                                            </div>
+
+                                            <div class="modal-body bg-warning">
+
+                                                <div class="collection">
+
+
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" id="edu">
+                                                    </div>
+
+                                                    <div class ="row">
+
+                                                        <label class="col-sm-2 col-xs-2" >Start </label>
+
+                                                        <div class="dropdown col-sm-4 col-xs-4" style = "display:inline-block;">
+                                                            <select class="" style="min-width: 10px;">
+                                                                <option value="volvo">Month</option>
+                                                                <option value="saab">Jan</option>
+                                                                <option value="opel">Feb</option>
+                                                                <option value="audi">Mar</option>
+                                                                <option value="audi">Apr</option>
+                                                                <option value="audi">May</option>
+                                                                <option value="audi">Jun</option>
+                                                                <option value="audi">Jul</option>
+                                                                <option value="audi">Aug</option>
+                                                                <option value="audi">Sep</option>
+                                                                <option value="audi">Oct</option>
+                                                                <option value="audi">Nov</option>
+                                                                <option value="audi">Dec</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="dropdown col-sm-4 col-xs-4" style = "display:inline-block;">
+                                                            <select id="year1" name="year1" class=" " style="min-width: 10px;" >
+                                                                <option value="">year</option>
+                                                                <option value="2006">2006</option>
+                                                                <option value="2005">2005</option>
+                                                                <option value="2004">2004</option>
+                                                                <option value="2003">2003</option>
+                                                                <option value="2002">2002</option>
+                                                                <option value="2001">2001</option>
+                                                                <option value="2000">2000</option>
+                                                                <option value="1999">1999</option>
+                                                                <option value="1998">1998</option>
+                                                                <option value="1997">1997</option>
+                                                                <option value="1996">1996</option>
+                                                                <option value="1995">1995</option>
+                                                                <option value="1994">1994</option>
+                                                                <option value="1993">1993</option>
+                                                                <option value="1992">1992</option>
+                                                                <option value="1991">1991</option>
+                                                                <option value="1990">1990</option>
+                                                                <option value="1989">1989</option>
+                                                                <option value="1988">1988</option>
+                                                                <option value="1987">1987</option>
+                                                                <option value="1986">1986</option>
+                                                                <option value="1985">1985</option>
+                                                                <option value="1984">1984</option>
+                                                                <option value="1983">1983</option>
+                                                                <option value="1982">1982</option>
+                                                                <option value="1981">1981</option>
+                                                                <option value="1980">1980</option>
+                                                                <option value="1979">1979</option>
+                                                                <option value="1978">1978</option>
+                                                                <option value="1977">1977</option>
+                                                                <option value="1976">1976</option>
+                                                                <option value="1975">1975</option>
+                                                                <option value="1974">1974</option>
+                                                                <option value="1973">1973</option>
+                                                                <option value="1972">1972</option>
+                                                                <option value="1971">1971</option>
+                                                                <option value="1970">1970</option>
+                                                                <option value="1969">1969</option>
+                                                                <option value="1968">1968</option>
+                                                                <option value="1967">1967</option>
+                                                                <option value="1966">1966</option>
+                                                                <option value="1965">1965</option>
+                                                                <option value="1964">1964</option>
+                                                                <option value="1963">1963</option>
+                                                                <option value="1962">1962</option>
+                                                                <option value="1961">1961</option>
+                                                                <option value="1960">1960</option>
+                                                                <option value="1959">1959</option>
+                                                                <option value="1958">1958</option>
+                                                                <option value="1957">1957</option>
+                                                                <option value="1956">1956</option>
+                                                                <option value="1955">1955</option>
+                                                                <option value="1954">1954</option>
+                                                                <option value="1953">1953</option>
+                                                                <option value="1952">1952</option>
+                                                                <option value="1951">1951</option>
+                                                                <option value="1950">1950</option>
+                                                                <option value="1949">1949</option>
+                                                                <option value="1948">1948</option>
+                                                                <option value="1947">1947</option>
+                                                                <option value="1946">1946</option>
+                                                                <option value="1945">1945</option>
+                                                                <option value="1944">1944</option>
+                                                                <option value="1943">1943</option>
+                                                                <option value="1942">1942</option>
+                                                                <option value="1941">1941</option>
+                                                                <option value="1940">1940</option>
+                                                                <option value="1939">1939</option>
+                                                                <option value="1938">1938</option>
+                                                                <option value="1937">1937</option>
+                                                                <option value="1936">1936</option>
+                                                                <option value="1935">1935</option>
+                                                                <option value="1934">1934</option>
+                                                                <option value="1933">1933</option>
+                                                                <option value="1932">1932</option>
+                                                                <option value="1931">1931</option>
+                                                                <option value="1930">1930</option>
+                                                                <option value="1929">1929</option>
+                                                                <option value="1928">1928</option>
+                                                                <option value="1927">1927</option>
+                                                                <option value="1926">1926</option>
+                                                                <option value="1925">1925</option>
+                                                                <option value="1924">1924</option>
+                                                                <option value="1923">1923</option>
+                                                                <option value="1922">1922</option>
+                                                                <option value="1921">1921</option>
+                                                                <option value="1920">1920</option>
+                                                                <option value="1919">1919</option>
+                                                                <option value="1918">1918</option>
+                                                                <option value="1917">1917</option>
+                                                                <option value="1916">1916</option>
+                                                                <option value="1915">1915</option>
+                                                                <option value="1914">1914</option>
+                                                                <option value="1913">1913</option>
+                                                                <option value="1912">1912</option>
+                                                                <option value="1911">1911</option>
+                                                                <option value="1910">1910</option>
+                                                                <option value="1909">1909</option>
+                                                                <option value="1908">1908</option>
+                                                                <option value="1907">1907</option>
+                                                                <option value="1906">1906</option>
+                                                                <option value="1905">1905</option>
+                                                                <option value="1904">1904</option>
+                                                                <option value="1903">1903</option>
+                                                                <option value="1902">1902</option>
+                                                                <option value="1901">1901</option>
+                                                                <option value="1900">1900</option>
+                                                            </select>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class ="row erow">
+
+                                                        <label class="col-sm-2 col-xs-2" >End </label>
+
+
+                                                        <div class="dropdown col-sm-4 col-xs-4" style = "display:inline-block;">
+                                                            <select class="" style="min-width: 10px;">
+                                                                <option value="volvo">Month</option>
+                                                                <option value="saab">Jan</option>
+                                                                <option value="opel">Feb</option>
+                                                                <option value="audi">Mar</option>
+                                                                <option value="audi">Apr</option>
+                                                                <option value="audi">May</option>
+                                                                <option value="audi">Jun</option>
+                                                                <option value="audi">Jul</option>
+                                                                <option value="audi">Aug</option>
+                                                                <option value="audi">Sep</option>
+                                                                <option value="audi">Oct</option>
+                                                                <option value="audi">Nov</option>
+                                                                <option value="audi">Dec</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="dropdown col-sm-4 col-xs-4" style = "display:inline-block; ">
+                                                            <select id="year2" name="year2" class=""     style="min-width: 10px;" >
+                                                                <option value="">year</option>
+                                                                <option value="2006">2006</option>
+                                                                <option value="2005">2005</option>
+                                                                <option value="2004">2004</option>
+                                                                <option value="2003">2003</option>
+                                                                <option value="2002">2002</option>
+                                                                <option value="2001">2001</option>
+                                                                <option value="2000">2000</option>
+                                                                <option value="1999">1999</option>
+                                                                <option value="1998">1998</option>
+                                                                <option value="1997">1997</option>
+                                                                <option value="1996">1996</option>
+                                                                <option value="1995">1995</option>
+                                                                <option value="1994">1994</option>
+                                                                <option value="1993">1993</option>
+                                                                <option value="1992">1992</option>
+                                                                <option value="1991">1991</option>
+                                                                <option value="1990">1990</option>
+                                                                <option value="1989">1989</option>
+                                                                <option value="1988">1988</option>
+                                                                <option value="1987">1987</option>
+                                                                <option value="1986">1986</option>
+                                                                <option value="1985">1985</option>
+                                                                <option value="1984">1984</option>
+                                                                <option value="1983">1983</option>
+                                                                <option value="1982">1982</option>
+                                                                <option value="1981">1981</option>
+                                                                <option value="1980">1980</option>
+                                                                <option value="1979">1979</option>
+                                                                <option value="1978">1978</option>
+                                                                <option value="1977">1977</option>
+                                                                <option value="1976">1976</option>
+                                                                <option value="1975">1975</option>
+                                                                <option value="1974">1974</option>
+                                                                <option value="1973">1973</option>
+                                                                <option value="1972">1972</option>
+                                                                <option value="1971">1971</option>
+                                                                <option value="1970">1970</option>
+                                                                <option value="1969">1969</option>
+                                                                <option value="1968">1968</option>
+                                                                <option value="1967">1967</option>
+                                                                <option value="1966">1966</option>
+                                                                <option value="1965">1965</option>
+                                                                <option value="1964">1964</option>
+                                                                <option value="1963">1963</option>
+                                                                <option value="1962">1962</option>
+                                                                <option value="1961">1961</option>
+                                                                <option value="1960">1960</option>
+                                                                <option value="1959">1959</option>
+                                                                <option value="1958">1958</option>
+                                                                <option value="1957">1957</option>
+                                                                <option value="1956">1956</option>
+                                                                <option value="1955">1955</option>
+                                                                <option value="1954">1954</option>
+                                                                <option value="1953">1953</option>
+                                                                <option value="1952">1952</option>
+                                                                <option value="1951">1951</option>
+                                                                <option value="1950">1950</option>
+                                                                <option value="1949">1949</option>
+                                                                <option value="1948">1948</option>
+                                                                <option value="1947">1947</option>
+                                                                <option value="1946">1946</option>
+                                                                <option value="1945">1945</option>
+                                                                <option value="1944">1944</option>
+                                                                <option value="1943">1943</option>
+                                                                <option value="1942">1942</option>
+                                                                <option value="1941">1941</option>
+                                                                <option value="1940">1940</option>
+                                                                <option value="1939">1939</option>
+                                                                <option value="1938">1938</option>
+                                                                <option value="1937">1937</option>
+                                                                <option value="1936">1936</option>
+                                                                <option value="1935">1935</option>
+                                                                <option value="1934">1934</option>
+                                                                <option value="1933">1933</option>
+                                                                <option value="1932">1932</option>
+                                                                <option value="1931">1931</option>
+                                                                <option value="1930">1930</option>
+                                                                <option value="1929">1929</option>
+                                                                <option value="1928">1928</option>
+                                                                <option value="1927">1927</option>
+                                                                <option value="1926">1926</option>
+                                                                <option value="1925">1925</option>
+                                                                <option value="1924">1924</option>
+                                                                <option value="1923">1923</option>
+                                                                <option value="1922">1922</option>
+                                                                <option value="1921">1921</option>
+                                                                <option value="1920">1920</option>
+                                                                <option value="1919">1919</option>
+                                                                <option value="1918">1918</option>
+                                                                <option value="1917">1917</option>
+                                                                <option value="1916">1916</option>
+                                                                <option value="1915">1915</option>
+                                                                <option value="1914">1914</option>
+                                                                <option value="1913">1913</option>
+                                                                <option value="1912">1912</option>
+                                                                <option value="1911">1911</option>
+                                                                <option value="1910">1910</option>
+                                                                <option value="1909">1909</option>
+                                                                <option value="1908">1908</option>
+                                                                <option value="1907">1907</option>
+                                                                <option value="1906">1906</option>
+                                                                <option value="1905">1905</option>
+                                                                <option value="1904">1904</option>
+                                                                <option value="1903">1903</option>
+                                                                <option value="1902">1902</option>
+                                                                <option value="1901">1901</option>
+                                                                <option value="1900">1900</option>
+                                                            </select>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="pull-right">
+                                                        <label><input type="checkbox" value="ongoing">Ongoing</label>
+                                                    </div>
+
+                                                </div>
+                                                <br><hr>
+
+                                                <div class="collection">
+
+
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" id="edu">
+                                                    </div>
+
+                                                    <div class ="row">
+
+                                                        <label class="col-sm-2 col-xs-2" >Start </label>
+
+                                                        <div class="dropdown col-sm-4 col-xs-4" style = "display:inline-block;">
+                                                            <select class="" style="min-width: 10px;">
+                                                                <option value="volvo">Month</option>
+                                                                <option value="saab">Jan</option>
+                                                                <option value="opel">Feb</option>
+                                                                <option value="audi">Mar</option>
+                                                                <option value="audi">Apr</option>
+                                                                <option value="audi">May</option>
+                                                                <option value="audi">Jun</option>
+                                                                <option value="audi">Jul</option>
+                                                                <option value="audi">Aug</option>
+                                                                <option value="audi">Sep</option>
+                                                                <option value="audi">Oct</option>
+                                                                <option value="audi">Nov</option>
+                                                                <option value="audi">Dec</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="dropdown col-sm-4 col-xs-4" style = "display:inline-block;">
+                                                            <select id="year1" name="year1" class=" " style="min-width: 10px;" >
+                                                                <option value="">year</option>
+                                                                <option value="2006">2006</option>
+                                                                <option value="2005">2005</option>
+                                                                <option value="2004">2004</option>
+                                                                <option value="2003">2003</option>
+                                                                <option value="2002">2002</option>
+                                                                <option value="2001">2001</option>
+                                                                <option value="2000">2000</option>
+                                                                <option value="1999">1999</option>
+                                                                <option value="1998">1998</option>
+                                                                <option value="1997">1997</option>
+                                                                <option value="1996">1996</option>
+                                                                <option value="1995">1995</option>
+                                                                <option value="1994">1994</option>
+                                                                <option value="1993">1993</option>
+                                                                <option value="1992">1992</option>
+                                                                <option value="1991">1991</option>
+                                                                <option value="1990">1990</option>
+                                                                <option value="1989">1989</option>
+                                                                <option value="1988">1988</option>
+                                                                <option value="1987">1987</option>
+                                                                <option value="1986">1986</option>
+                                                                <option value="1985">1985</option>
+                                                                <option value="1984">1984</option>
+                                                                <option value="1983">1983</option>
+                                                                <option value="1982">1982</option>
+                                                                <option value="1981">1981</option>
+                                                                <option value="1980">1980</option>
+                                                                <option value="1979">1979</option>
+                                                                <option value="1978">1978</option>
+                                                                <option value="1977">1977</option>
+                                                                <option value="1976">1976</option>
+                                                                <option value="1975">1975</option>
+                                                                <option value="1974">1974</option>
+                                                                <option value="1973">1973</option>
+                                                                <option value="1972">1972</option>
+                                                                <option value="1971">1971</option>
+                                                                <option value="1970">1970</option>
+                                                                <option value="1969">1969</option>
+                                                                <option value="1968">1968</option>
+                                                                <option value="1967">1967</option>
+                                                                <option value="1966">1966</option>
+                                                                <option value="1965">1965</option>
+                                                                <option value="1964">1964</option>
+                                                                <option value="1963">1963</option>
+                                                                <option value="1962">1962</option>
+                                                                <option value="1961">1961</option>
+                                                                <option value="1960">1960</option>
+                                                                <option value="1959">1959</option>
+                                                                <option value="1958">1958</option>
+                                                                <option value="1957">1957</option>
+                                                                <option value="1956">1956</option>
+                                                                <option value="1955">1955</option>
+                                                                <option value="1954">1954</option>
+                                                                <option value="1953">1953</option>
+                                                                <option value="1952">1952</option>
+                                                                <option value="1951">1951</option>
+                                                                <option value="1950">1950</option>
+                                                                <option value="1949">1949</option>
+                                                                <option value="1948">1948</option>
+                                                                <option value="1947">1947</option>
+                                                                <option value="1946">1946</option>
+                                                                <option value="1945">1945</option>
+                                                                <option value="1944">1944</option>
+                                                                <option value="1943">1943</option>
+                                                                <option value="1942">1942</option>
+                                                                <option value="1941">1941</option>
+                                                                <option value="1940">1940</option>
+                                                                <option value="1939">1939</option>
+                                                                <option value="1938">1938</option>
+                                                                <option value="1937">1937</option>
+                                                                <option value="1936">1936</option>
+                                                                <option value="1935">1935</option>
+                                                                <option value="1934">1934</option>
+                                                                <option value="1933">1933</option>
+                                                                <option value="1932">1932</option>
+                                                                <option value="1931">1931</option>
+                                                                <option value="1930">1930</option>
+                                                                <option value="1929">1929</option>
+                                                                <option value="1928">1928</option>
+                                                                <option value="1927">1927</option>
+                                                                <option value="1926">1926</option>
+                                                                <option value="1925">1925</option>
+                                                                <option value="1924">1924</option>
+                                                                <option value="1923">1923</option>
+                                                                <option value="1922">1922</option>
+                                                                <option value="1921">1921</option>
+                                                                <option value="1920">1920</option>
+                                                                <option value="1919">1919</option>
+                                                                <option value="1918">1918</option>
+                                                                <option value="1917">1917</option>
+                                                                <option value="1916">1916</option>
+                                                                <option value="1915">1915</option>
+                                                                <option value="1914">1914</option>
+                                                                <option value="1913">1913</option>
+                                                                <option value="1912">1912</option>
+                                                                <option value="1911">1911</option>
+                                                                <option value="1910">1910</option>
+                                                                <option value="1909">1909</option>
+                                                                <option value="1908">1908</option>
+                                                                <option value="1907">1907</option>
+                                                                <option value="1906">1906</option>
+                                                                <option value="1905">1905</option>
+                                                                <option value="1904">1904</option>
+                                                                <option value="1903">1903</option>
+                                                                <option value="1902">1902</option>
+                                                                <option value="1901">1901</option>
+                                                                <option value="1900">1900</option>
+                                                            </select>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class ="row erow2">
+
+                                                        <label class="col-sm-2 col-xs-2" >End </label>
+
+
+                                                        <div class="dropdown col-sm-4 col-xs-4" style = "display:inline-block;">
+                                                            <select class="" style="min-width: 10px;">
+                                                                <option value="volvo">Month</option>
+                                                                <option value="saab">Jan</option>
+                                                                <option value="opel">Feb</option>
+                                                                <option value="audi">Mar</option>
+                                                                <option value="audi">Apr</option>
+                                                                <option value="audi">May</option>
+                                                                <option value="audi">Jun</option>
+                                                                <option value="audi">Jul</option>
+                                                                <option value="audi">Aug</option>
+                                                                <option value="audi">Sep</option>
+                                                                <option value="audi">Oct</option>
+                                                                <option value="audi">Nov</option>
+                                                                <option value="audi">Dec</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="dropdown col-sm-4 col-xs-4" style = "display:inline-block; ">
+                                                            <select id="year2" name="year2" class=""     style="min-width: 10px;" >
+                                                                <option value="">year</option>
+                                                                <option value="2006">2006</option>
+                                                                <option value="2005">2005</option>
+                                                                <option value="2004">2004</option>
+                                                                <option value="2003">2003</option>
+                                                                <option value="2002">2002</option>
+                                                                <option value="2001">2001</option>
+                                                                <option value="2000">2000</option>
+                                                                <option value="1999">1999</option>
+                                                                <option value="1998">1998</option>
+                                                                <option value="1997">1997</option>
+                                                                <option value="1996">1996</option>
+                                                                <option value="1995">1995</option>
+                                                                <option value="1994">1994</option>
+                                                                <option value="1993">1993</option>
+                                                                <option value="1992">1992</option>
+                                                                <option value="1991">1991</option>
+                                                                <option value="1990">1990</option>
+                                                                <option value="1989">1989</option>
+                                                                <option value="1988">1988</option>
+                                                                <option value="1987">1987</option>
+                                                                <option value="1986">1986</option>
+                                                                <option value="1985">1985</option>
+                                                                <option value="1984">1984</option>
+                                                                <option value="1983">1983</option>
+                                                                <option value="1982">1982</option>
+                                                                <option value="1981">1981</option>
+                                                                <option value="1980">1980</option>
+                                                                <option value="1979">1979</option>
+                                                                <option value="1978">1978</option>
+                                                                <option value="1977">1977</option>
+                                                                <option value="1976">1976</option>
+                                                                <option value="1975">1975</option>
+                                                                <option value="1974">1974</option>
+                                                                <option value="1973">1973</option>
+                                                                <option value="1972">1972</option>
+                                                                <option value="1971">1971</option>
+                                                                <option value="1970">1970</option>
+                                                                <option value="1969">1969</option>
+                                                                <option value="1968">1968</option>
+                                                                <option value="1967">1967</option>
+                                                                <option value="1966">1966</option>
+                                                                <option value="1965">1965</option>
+                                                                <option value="1964">1964</option>
+                                                                <option value="1963">1963</option>
+                                                                <option value="1962">1962</option>
+                                                                <option value="1961">1961</option>
+                                                                <option value="1960">1960</option>
+                                                                <option value="1959">1959</option>
+                                                                <option value="1958">1958</option>
+                                                                <option value="1957">1957</option>
+                                                                <option value="1956">1956</option>
+                                                                <option value="1955">1955</option>
+                                                                <option value="1954">1954</option>
+                                                                <option value="1953">1953</option>
+                                                                <option value="1952">1952</option>
+                                                                <option value="1951">1951</option>
+                                                                <option value="1950">1950</option>
+                                                                <option value="1949">1949</option>
+                                                                <option value="1948">1948</option>
+                                                                <option value="1947">1947</option>
+                                                                <option value="1946">1946</option>
+                                                                <option value="1945">1945</option>
+                                                                <option value="1944">1944</option>
+                                                                <option value="1943">1943</option>
+                                                                <option value="1942">1942</option>
+                                                                <option value="1941">1941</option>
+                                                                <option value="1940">1940</option>
+                                                                <option value="1939">1939</option>
+                                                                <option value="1938">1938</option>
+                                                                <option value="1937">1937</option>
+                                                                <option value="1936">1936</option>
+                                                                <option value="1935">1935</option>
+                                                                <option value="1934">1934</option>
+                                                                <option value="1933">1933</option>
+                                                                <option value="1932">1932</option>
+                                                                <option value="1931">1931</option>
+                                                                <option value="1930">1930</option>
+                                                                <option value="1929">1929</option>
+                                                                <option value="1928">1928</option>
+                                                                <option value="1927">1927</option>
+                                                                <option value="1926">1926</option>
+                                                                <option value="1925">1925</option>
+                                                                <option value="1924">1924</option>
+                                                                <option value="1923">1923</option>
+                                                                <option value="1922">1922</option>
+                                                                <option value="1921">1921</option>
+                                                                <option value="1920">1920</option>
+                                                                <option value="1919">1919</option>
+                                                                <option value="1918">1918</option>
+                                                                <option value="1917">1917</option>
+                                                                <option value="1916">1916</option>
+                                                                <option value="1915">1915</option>
+                                                                <option value="1914">1914</option>
+                                                                <option value="1913">1913</option>
+                                                                <option value="1912">1912</option>
+                                                                <option value="1911">1911</option>
+                                                                <option value="1910">1910</option>
+                                                                <option value="1909">1909</option>
+                                                                <option value="1908">1908</option>
+                                                                <option value="1907">1907</option>
+                                                                <option value="1906">1906</option>
+                                                                <option value="1905">1905</option>
+                                                                <option value="1904">1904</option>
+                                                                <option value="1903">1903</option>
+                                                                <option value="1902">1902</option>
+                                                                <option value="1901">1901</option>
+                                                                <option value="1900">1900</option>
+                                                            </select>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="pull-right">
+                                                        <label><input type="checkbox" value="ongoing2">Ongoing</label>
+                                                    </div>
+
+                                                </div>
+                                                <br><hr>
+
+
+
+                                            </div>
+
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-info" data-dismiss="modal">Save</button>
+                                                <button type="button" class="btn btn-default pull-left">+</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- ///////////////////// END OF MODEL //////////////////////// -->
+
+
+                                <div class="content-list content-menu">
+                                    <ul class="list-wrapper">
+                                        <li class="mgbt-xs-10 ls">
+                                            <span class="menu-icon vd_green"><i class="fa  fa-circle-o"></i></span>
+                                            <span class="menu-text">
+                                                Currently working in XXX International School.
+                                                <br>
+                                                <span class="menu-info">
+                                                    <span class="menu-date">(March 2015 ~ Now)</span>
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li class="mgbt-xs-10 ls">
+                                            <span class="menu-icon vd_green"><i class="fa  fa-circle-o"></i></span>
+                                            <span class="menu-text">
+                                                X years of experience as a English Teacher.
+                                                <br>
+                                                <span class="menu-info">
+                                                    <span class="menu-date">(March 2013 ~ January 2015)</span>
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li class="mgbt-xs-10 ls">
+                                            <span class="menu-icon vd_green"><i class="fa  fa-circle-o"></i></span>
+                                            <span class="menu-text">
+                                                X years of experience as a English Teacher.
+                                                <br>
+                                                <span class="menu-info">
+                                                    <span class="menu-date">(March 2013 ~ January 2015)</span>
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li class="mgbt-xs-10 ls">
+                                            <span class="menu-icon vd_green"><i class="fa  fa-circle-o"></i></span>
+                                            <span class="menu-text">
+                                                X years of experience as a English Teacher.
+                                                <br>
+                                                <span class="menu-info">
+                                                    <span class="menu-date">(March 2013 ~ January 2015)</span>
+                                                </span>
+                                            </span>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <div class="tabs col-xs-12">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a data-toggle="tab" href="#description">Description</a></li>
+                                    <li><a data-toggle="tab" href="#vlectures">Video Lectures</a></li>
+                                    <li><a data-toggle="tab" href="#reviews">Reviews</a></li>
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div id="description" class="tab-pane fade in active">
+                                        <h4>Description</h4>
+                                        <ul class="list-group">
+                                            <li class="list-group-item"><strong>Certifications:</strong>
+                                                <button type="button" id ="editcert" class="btn btn-primary btn-xs fa fa-edit" data-toggle="modal" data-target="#myModal4"></button>
+                                            </li>
+                                            <!-- Modal -->
+                                            <div id="myModal4" class="modal fade" role="dialog">
+                                                <div class="modal-dialog modal-md">
+                                                    <!-- Modal content-->
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title">Certifications</h4>
+                                                        </div>
+                                                        <div class="modal-body bg-warning">
+                                                            <div ng-repeat="x in EditProfileCtrl.user.certifications">
+                                                                <div class="collection">
+                                                                    <div class="form-group">
+                                                                        <input type="text" class="form-control" ng-model="x.name">
+                                                                    </div>
+                                                                </div>
+                                                                <hr>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default pull-left" ng-click="EditProfileCtrl.editOptions.addCertification()">+</button>
+                                                            <button type="button" ng-click="EditProfileCtrl.resetUserLocal()" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-info" ng-click="EditProfileCtrl.editOptions.saveCertifications()">Save</button>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="li_inner_bullet_content" ng-repeat="x in EditProfileCtrl.user.certifications">
+                                                <span class="menu-icon vd_green"><i class="fa  fa-circle-o"></i></span>
+                                                <span class="menu-text ">
+													<a class="cert1">{{x.name}}
+													</a>
+                                                </span>
+                                            </div>
+
+                                            <li class="list-group-item"><strong>Method:</strong> <!-- Trigger the modal with a button -->
+                                                <button type="button" id ="editmethod" class="btn btn-primary btn-xs fa fa-pencil-square-o" data-toggle="modal" data-target="#myModal5"></button>
+                                            </li>
+
+
+                                            <!-- Modal -->
+                                            <div id="myModal5" class="modal fade" role="dialog">
+                                                <div class="modal-dialog modal-sm">
+
+                                                    <!-- Modal content-->
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title">Tution Methods</h4>
+                                                        </div>
+
+                                                        <div class="modal-body bg-warning">
+
+                                                            <form role="form" class="">
+
+
+                                                                <div class="class=col-sm-2">
+                                                                    <label><input type="checkbox"  value="pt">Private Tuition</label>
+                                                                </div>
+                                                                <div class="class=col-sm-3">
+                                                                    <label><input type="checkbox" value="gt">Group Tuition</label>
+                                                                </div>
+                                                                <div class="">
+                                                                    <label><input type="checkbox" value="ht">Home Tuition</label>
+                                                                </div>
+
+                                                            </form>
+
+                                                        </div>
+
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-info" data-dismiss="modal">Save</button>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="li_inner_bullet_content">
+                                                <span class="menu-text">
+                                                    Home Tution
+                                                </span>
+                                            </div>
+                                            <li class="list-group-item"><strong>Classes</strong><!-- Trigger the modal with a button -->
+                                                <button type="button" id ="editclasses" class="btn btn-primary btn-xs fa fa-pencil-square-o" data-toggle="modal" data-target="#myModal6"></button>
+                                            </li>
+
+
+                                            <!-- Modal -->
+                                            <div id="myModal6" class="modal fade" role="dialog">
+                                                <div class="modal-dialog modal-md">
+
+                                                    <!-- Modal content-->
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title">Classes:</h4>
+                                                        </div>
+
+                                                        <div class="modal-body bg-warning">
+
+                                                            <div class="form-group col-sm-12">
+                                                                <label for="tags_2" class="control-label">Add or Remove Classes:</label>
+                                                                <input id="tags_2" type="text" class="tags  " value="Class#1,Class#2" />
+                                                            </div>
+
+                                                            <br><br><br><br><br><br>
+
+                                                        </div>
+
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-warning" data-dismiss="modal">Save</button>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="li_inner_bullet_content">
+                                                <span class="menu-text">
+                                                    <span class="tags">Item 1</span>
+                                                    <span class="tags">Item 1</span>
+                                                    <span class="tags">Item 1</span>
+                                                    <span class="tags">Item 1</span>
+                                                    <span class="tags">Item 1</span>
+                                                </span>
+                                            </div>
+                                            <li class="list-group-item"><strong>Courses:</strong><button type="button" id ="editcourses" class="btn btn-primary btn-xs fa fa-pencil-square-o" data-toggle="modal" data-target="#myModal7"></button></li>
+
+                                            <!-- Modal -->
+                                            <div id="myModal7" class="modal fade" role="dialog">
+                                                <div class="modal-dialog modal-md">
+
+                                                    <!-- Modal content-->
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title">Courses</h4>
+                                                        </div>
+
+                                                        <div class="modal-body bg-warning">
+
+                                                            <div class="form-group col-sm-12">
+                                                                <label for="tags_3" class="control-label">Add or Remove Courses:</label>
+                                                                <input id="tags_3" type="text" class="tags  " value="Course#1,Course#2" />
+                                                            </div>
+
+                                                            <br><br><br><br><br><br>
+
+                                                        </div>
+
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-warning" data-dismiss="modal">Save</button>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="li_inner_bullet_content">
+                                                <span class="menu-text">
+                                                    <span class="tags">Item 1</span>
+                                                    <span class="tags">Item 1</span>
+                                                    <span class="tags">Item 1</span>
+                                                    <span class="tags">Item 1</span>
+                                                    <span class="tags">Item 1</span>
+                                                </span>
+                                            </div>
+
+                                        </ul>
+                                    </div>
+
+                                    <div id="vlectures" class="tab-pane fade">
+                                        <h4>Video lectures</h4>
+                                        <p>1.</p>
+                                        <p>2.</p>
+                                        <p>3.</p>
+                                    </div>
+
+                                    <div id="reviews" class="tab-pane fade">
+
+                                        <div class="searchresult list" style="display: block;">
+                                            <h4>Reviews</h4>
+
+                                            <ul>
+
+                                                <li class="clearfix">
+                                                    <div class="col-sm-2">
+                                                        <a class="thumbnail" href="detail.html" style="margin-bottom:0px;"><img
+                                                                src="img/product1.jpg" alt=""></a>
+                                                        <h5 class="text-center" style="margin:0px;"><a href="#">Name</a></h5>
+                                                    </div>
+                                                    <div class="col-sm-10">
+                                                        <p>
+                                                            Rating:
+                        				  <span class="starRating">
+                                          <input id="a_rating5" type="radio" name="arating" value="5">
+                                          <label for="a_rating5">5</label>
+                                          <input id="a_rating4" type="radio" name="arating" value="4">
+                                          <label for="a_rating4">4</label>
+                                          <input id="a_rating3" type="radio" name="arating" value="3" checked>
+                                          <label for="a_rating3">3</label>
+                                          <input id="a_rating2" type="radio" name="arating" value="2">
+                                          <label for="a_rating2">2</label>
+                                          <input id="a_rating1" type="radio" name="arating" value="1">
+                                          <label for="a_rating1">1</label>
+                                          </span>
+
+										<span class="pull-right">
+										1:47 PM Wed,22 Jun 2016
+										</span>
+                                                        </p>
+
+                                                        <div class="discrption"><h5>Comments: <button type="button" class="btn btn-danger btn-xs fa fa-close pull-right"></button></h5>
+                                                            <textarea name="newcomment" id="" cols="70" rows="5"></textarea>  <br></div>
+                                                    </div>
+                                                </li>
+
+
+
+
+
+
+                                                <li class="clearfix">
+                                                    <div class="col-sm-2">
+                                                        <a class="thumbnail" href="detail.html" style="margin-bottom:0px;"><img
+                                                                src="img/product1.jpg" alt=""></a>
+                                                        <h5 class="text-center" style="margin:0px;"><a href="#">Name</a></h5>
+                                                    </div>
+                                                    <div class="col-sm-10">
+                                                        <p>
+                                                            Rating:
+                        				  <span class="starRating">
+                                          <input id="a_rating5" type="radio" name="arating" value="5">
+                                          <label for="a_rating5">5</label>
+                                          <input id="a_rating4" type="radio" name="arating" value="4">
+                                          <label for="a_rating4">4</label>
+                                          <input id="a_rating3" type="radio" name="arating" value="3" checked>
+                                          <label for="a_rating3">3</label>
+                                          <input id="a_rating2" type="radio" name="arating" value="2">
+                                          <label for="a_rating2">2</label>
+                                          <input id="a_rating1" type="radio" name="arating" value="1">
+                                          <label for="a_rating1">1</label>
+                                          </span>
+
+										<span class="pull-right">
+										1:47 PM Wed,22 Jun 2016
+										</span>
+                                                        </p>
+
+                                                        <div class="discrption"><h5>Comments: <button type="button" class="btn btn-danger btn-xs fa fa-close pull-right"></button></h5>some text some text some text some
+                                                            text some text <br></div>
+                                                    </div>
+                                                </li>
+
+
+                                                <li class="clearfix">
+                                                    <div class="col-sm-2">
+                                                        <a class="thumbnail" href="detail.html" style="margin-bottom:0px;"><img
+                                                                src="img/product1.jpg" alt=""></a>
+                                                        <h5 class="text-center" style="margin:0px;"><a href="#">Name</a></h5>
+                                                    </div>
+                                                    <div class="col-sm-10">
+                                                        <p>
+                                                            Rating:
+                        				  <span class="starRating">
+                                          <input id="b_rrating5" type="radio" name="brating" value="5">
+                                          <label for="b_rrating5">5</label>
+                                          <input id="b_rrating4" type="radio" name="brating" value="4">
+                                          <label for="b_rrating4">4</label>
+                                          <input id="b_rrating3" type="radio" name="brating" value="3" checked>
+                                          <label for="b_rrating3">3</label>
+                                          <input id="b_rrating2" type="radio" name="brating" value="2">
+                                          <label for="b_rrating2">2</label>
+                                          <input id="b_rrating1" type="radio" name="brating" value="1">
+                                          <label for="b_rrating1">1</label>
+                                          </span>
+
+										  <span class="pull-right">
+										1:47 PM Wed,22 Jun 2016
+										</span>
+
+                                                        </p>
+
+                                                        <div class="discrption"><h5>Comments:<button type="button" class="btn btn-danger btn-xs fa fa-close pull-right"></button></h5>some text some text some text some
+                                                            text some text <br></div>
+                                                    </div>
+                                                </li>
+
+                                                <li class="clearfix">
+                                                    <div class="col-sm-2">
+                                                        <a class="thumbnail" href="detail.html" style="margin-bottom:0px;"><img
+                                                                src="img/product1.jpg" alt=""></a>
+                                                        <h5 class="text-center" style="margin:0px;"><a href="#">Name</a></h5>
+                                                    </div>
+                                                    <div class="col-sm-10">
+                                                        <p>
+                                                            Rating:
+                        				  <span class="starRating">
+                                          <input id="c_rrating5" type="radio" name="crating" value="5">
+                                          <label for="c_rrating5">5</label>
+                                          <input id="c_rrating4" type="radio" name="crating" value="4">
+                                          <label for="c_rrating4">4</label>
+                                          <input id="c_rrating3" type="radio" name="crating" value="3" checked>
+                                          <label for="c_rrating3">3</label>
+                                          <input id="c_rrating2" type="radio" name="crating" value="2">
+                                          <label for="c_rrating2">2</label>
+                                          <input id="c_rrating1" type="radio" name="crating" value="1">
+                                          <label for="c_rrating1">1</label>
+                                          </span>
+
+										  <span class="pull-right">
+										1:47 PM Wed,22 Jun 2016
+										</span>
+
+                                                        </p>
+
+                                                        <div class="discrption"><h5>Comments:<button type="button" class="btn btn-danger btn-xs fa fa-close pull-right"></button></h5>some text some text some text some
+                                                            text some text <br></div>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

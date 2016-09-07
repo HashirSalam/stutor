@@ -1,0 +1,8 @@
+﻿{
+  "name": "example-multiSlotTranscludeExample",
+  "files": [
+    "index-production.html",
+    "app.js",
+    "protractor.js"
+  ]
+}

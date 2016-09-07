@@ -4,6 +4,7 @@ var app = angular.module('stutor',
         "stutor.login",
         "stutor.home",
         "stutor.register",
+        "stutor.tutionPost",
     ]
 );
 
@@ -31,7 +32,9 @@ app.run(function($ionicPlatform) {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+        if (cordova.plugins.Keyboard.hideKeyboardAccessoryBar) {
+            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+        }
       cordova.plugins.Keyboard.disableScroll(true);
     }
     if (window.StatusBar) {
@@ -89,7 +92,7 @@ app.factory('auth', ['$http', '$window', function ($http, $window) {
     };
 
     auth.logIn = function (user) {
-        return $http.post('http://192.168.183.101:3000/login', user).success(function (data) {
+        return $http.post('http://192.168.137.1:3000/login', user).success(function (data) {
             auth.saveToken(data.token);
             auth.saveUserID(data.userId);
         });

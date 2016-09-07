@@ -1,0 +1,7 @@
+﻿{
+  "name": "example-ngModel-getter-setter",
+  "files": [
+    "index-production.html",
+    "app.js"
+  ]
+}

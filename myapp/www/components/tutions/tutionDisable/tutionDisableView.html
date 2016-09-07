@@ -1,0 +1,84 @@
+<div id="maincontainer">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a>My Account</a></li>
+            <li class="active"> Remove Tution Ad</li>
+        </ul>
+        <a href="#/tutionPost" class="postadinner"><span> <i class="fa fa-pencil"></i> Post An Ad</span></a>
+        <div class="row mt40">
+            <!--  Sideabar -->
+            <aside class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <!--My Account-->
+                <div class="sidemodule">
+                    <h2 class="heading5"><span class="maintext"> My Account</span></h2>
+                    <ul class="nav nav-list categories">
+                        <li><a href="#/dashboard">Dashboard</a></li>
+                        <li><a href="#/editprofile">Edit Profile </a></li>
+                        <li><a href="#/tutionPost">Post An Ad</a></li>
+                        <li><a href="#/tutionView">View My Ads</a></li>
+                        <li><a href="#/bookPost">Donate A Book</a>
+                            <ul class="nav nav-list">
+                                <li><a href="#/bookSearch">Search A Book</a></li>
+                                <li><a href="#/bookPost">Post A Book</a></li>
+                                <li><a href="#/bookView">View My Books</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#/transactionHistory">My Transactions</a></li>
+                        <li><a href="#/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <!--  Container -->
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 mt40column">
+                <div class="">
+                    <h4 class="heading5"><span class="maintext"> Remove Ad</span></h4>
+                    <div class="alert alert-warning">
+                        <strong>Warning !</strong> Your Ad will be Permanently deleted.
+                    </div>
+
+                    <form class="form-horizontal mt20" ng-submit="tutionDelete()" novalidate>
+                        <fieldset>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Ad Title</label>
+                                <div class="col-sm-6">
+                                    <p class="form-control col-sm-6">{{ad.title}} <a href=#/tutionDetail/{{ad._id}} style="color:red;">View ad</a></p>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Reason for deleting Ad:</label>
+                                <div class="col-sm-6">
+                                    <select name="category" class="form-control" id="startingTime" ng-model="disable.reason" required>
+                                    <option value="">Select a reason</option>
+                                    <optgroup label="">
+                                       <option value="Found Tutor">Found Tutor</option>
+                                       <option value="Found Student">Found Student</option>
+                                       <option value="Not Required Anymore">Not Required Anymore</option>
+                                       <option value="Other">Other</option>
+                                    </optgroup>
+                                 </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Suggestions (optional)</label>
+                                <div class="col-sm-6">
+                                    <textarea rows="6" class="form-control col-sm-6" ng-model="disable.suggestion"></textarea>
+                                </div>
+                            </div>
+                            <div class="errormsg alert col-sm-12" ng-show="error">
+                                <strong>Error!</strong> {{error}}
+                            </div>
+
+                            <div class="form-group pull-right">
+                                <input type="submit" class="btn btn-orange " value="Confirm Delete">
+                                <a href="#/tutionEdit/{{ad._id}}"><input type="button" class="btn" value="Cancel"></a>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

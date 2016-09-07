@@ -1,0 +1,7 @@
+﻿{
+  "name": "example-simpleTranscludeExample",
+  "files": [
+    "index-production.html",
+    "protractor.js"
+  ]
+}

@@ -1,0 +1,100 @@
+<div id="maincontainer">
+    <div class="container">
+        <!--  breadcrumb -->
+        <ul class="breadcrumb">
+            <li> <a>My Account</a> </li>
+            <li class="active">Listing</li>
+        </ul>
+        <a href="#/tutionPost" class="postadinner"><span> <i class="fa fa-pencil"></i> Post An Ad</span></a>
+        <div class="row mt40">
+
+            <!--  Sideabar -->
+            <aside class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <!--My Account-->
+                <div class="sidemodule">
+                    <h2 class="heading5"><span class="maintext"> My Account</span></h2>
+                    <ul class="nav nav-list categories">
+                        <li> <a href="#/dashboard">Dashboard</a> </li>
+                        <li> <a href="#/editprofile">Edit Profile </a></li>
+                        <li> <a href="#/tutionPost">Post An Ad</a> </li>
+                        <li> <a href="#/tutionView">View My Ads</a> </li>
+                        <li> <a href="#/bookPost">Donate A Book</a>
+                            <ul class="nav nav-list">
+                                <li><a href="#/bookSearch">Search A Book</a></li>
+                                <li><a href="#/bookPost">Post A Book</a></li>
+                                <li><a href="#/bookView">View My Books</a></li>
+                            </ul>
+                        </li>
+                        <li> <a href="#/transactionHistory">My Transactions</a></li>
+                        <li> <a href="#/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <!--  Container -->
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 mt40column">
+                <!--Sorting-->
+                <div class="sorting well">
+                    <form class=" form-inline pull-left">
+                        <h2 class="heading5"><span class="maintext"> My Ads</span></h2>
+
+                    </form>
+                    <div class="btn-group pull-right">
+                        <form class=" form-inline pull-left">
+                            Show :
+                            <select class="span2">
+                            <option>All</option>
+                            <option>Featured Only</option>
+                            <option>Normal Only</option>
+                        </select> &nbsp;&nbsp;
+                        </form>
+                    </div>
+                </div>
+                <!-- Listing-->
+                <div class="mt40" id="serchlist">
+                    <div class="searchresult list" style="display: block;">
+                        <ul>
+
+
+                            <li class="clearfix" ng-repeat="x in ad.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))" ng-init="mywar ='#/tutionEdit/'+ x._id">
+                                <a type="button" id="" class="btn-xs fa fa-edit btn-primary pull-right" style="margin-right: 1em;" href={{mywar}}> </a>
+                                <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+                                    <a class="thumbnail" href="detail.html"><img src={{x.imageUrl}} alt=""></a>
+                                    <div class="featured">Featured</div>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-6 col-sm-6 col-xs-6" ng-init="title ='#/tutionDetail/'+ x._id ">
+
+                                    <h3><a class="title" href="{{title}}">{{x.title}} </a></h3>
+                                    <ul class="icondetail">
+                                        <li><i class="fa fa-map-marker"></i> Location : {{x.postedBy.geoLocation.address}}</li>
+                                        <li><i class="fa fa-th-list"></i> Availibility : <a href="#">{{x.availability | showAvailabilityFilter}}</a></li>
+
+                                        <li><i class="fa fa-th-list"></i> Course : <a ng-repeat="y in x.courses">{{y.text}},&nbsp;</a></li>
+                                        <li><i class="fa fa-user"></i> Posted by : <a>{{x.postedBy.name}}</a></li>
+                                    </ul>
+
+
+                                </div>
+                                <br><br><br><br>
+                                <btn class="btn btn-success pull-right" style="margin-right: 1em;">Feature This Ad</btn>
+                            </li>
+
+                        </ul>
+                        <!-- Paging-->
+                        <div>
+                            <div class="pull-right">
+                                View <select ng-model="viewby" convert-to-number ng-change="setItemsPerPage(viewby)"><option>3</option><option>5</option><option>10</option><option>20</option><option>30</option><option>40</option><option>50</option></select> records at a time.
+                            </div>
+                            <!--<pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" ></pagination>-->
+                            <ul uib-pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" items-per-page="itemsPerPage"></ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Social-->
+
+
+    <!-- Got to top -->
+    <a id="gotop"><i class="fa fa-arrow-circle-up"></i></a> </div>

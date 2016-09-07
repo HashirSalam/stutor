@@ -1,0 +1,189 @@
+<div id="maincontainer">
+    <div class="container">
+        <div class="row mt40">
+            <!--  Sideabar -->
+            <aside class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <!--Filter-->
+
+                <!--Subject-->
+                <div class="sidemodule">
+                    <h2 class="heading5"><span class="maintext">Filter Search</span></h2>
+                    <ul class="nav nav-list categories">
+                        <li><input type="text" placeholder="Search..." ng-model="searchOptions.search" ng-change="searchtutions()"></li>
+                    </ul>
+                    <h5 class="subheading">Course</h5>
+                    <ul class="nav nav-list categories">
+                        <li><input type="text" placeholder="Search By Course" ng-model="searchOptions.course" ng-change="searchtutions()"></li>
+                    </ul>
+                    <h5 class="subheading">Class</h5>
+                    <ul class="nav nav-list categories">
+                        <li><input type="text" placeholder="Search By Class" ng-model="searchOptions.class" ng-change="searchtutions()"></li>
+                    </ul>
+                    <h5 class="subheading">Method</h5>
+                    <label>
+                        <input type="checkbox" ng-model="searchOptions.tutionMethod.privateTution" ng-change="searchtutions()">&nbsp;Private
+                        Tuition
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" ng-model="searchOptions.tutionMethod.groupTution" ng-change="searchtutions()">&nbsp;Group
+                        Tuition
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" ng-model="searchOptions.tutionMethod.homeTution" ng-change="searchtutions()">&nbsp;Home
+                        Tuition
+                    </label>
+                    <br>
+                    <h5 class="subheading">Gender</h5>
+                    <input type="radio" ng-model="searchOptions.gender" value="male" ng-change="searchtutions()"> Male
+                    <input type="radio" ng-model="searchOptions.gender" value="female" ng-change="searchtutions()"> Female
+                    <input type="radio" ng-model="searchOptions.gender" value="any" ng-change="searchtutions()"> Any
+                </div>
+
+                <!--Location-->
+                <div class="sidemodule">
+                    <h2 class="heading5"><span class="maintext"> Location</span></h2>
+                    <div>
+                        <input type="checkbox" ng-model="searchOptions.searchAllLoc"> Show All
+                        Locations
+                        <br><br>
+                    </div>
+                </div>
+                <div ng-hide="searchOptions.searchAllLoc">
+                    <button ng-click="mapFunctions.getUserLocation()">
+                        Get Current Position
+                    </button>
+                    <input id="searchTextField" type="text" style="width: 100%;"
+                           placeholder="Enter or click on map!">
+                    <div id="map-canvas" style="width: 100%;height: 300px;"></div>
+                    <h5 class="subheading">Distance</h5>
+                    <section id="main">
+                        <button class="btn1" style="float: left" ng-click="changeDistance('-')">-</button>
+                        <button class="btn2" style="float: right" ng-click="changeDistance('+')">+</button>
+
+                        <input id="defaultSlider" ng-model="searchOptions.range" type="range" min="{{minDistance}}"
+                               max="{{maxDistance}}">
+                        <p class="note">Distance: <span id="currentValue">{{searchOptions.range}}</span> Km</p>
+                        <button type="button" class="pull-right" ng-click="searchBooks()">Search</button>
+                    </section>
+                </div>
+
+
+            </aside>
+            <!--  Container -->
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 mt40column">
+                <div class="sorting well">
+                    <form class="form-inline pull-left">
+                        Show Results of :
+                        <select class="span2" ng-model="searchOptions.resultShow" ng-change="searchtutions()">
+                            <option value="both">Tutors/Students</option>
+                            <option value="tutors">Tutor Only</option>
+                            <option value="students">Student Only</option>
+                        </select>
+                        &nbsp;&nbsp;
+                    </form>
+                    <div class="btn-group pull-right">
+                        <button class="btn btn-orange"><i class="fa fa-th-list fa-white"></i> </button>
+                        <!--<button class="btn " id="grid"><i class="	fa fa-location-arrow "></i></button>-->
+                    </div>
+                </div>
+                <div class="mt40" id="serchlist">
+                    <div class="searchresult list" style="display: block;">
+                        <ul>
+                            <li class="clearfix" ng-repeat="x in tutions.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))"
+                                ng-init="myvar ='#/tutionDetail/'+ x._id; userLink = '#/viewProfile/'+ x.postedBy._id"
+                            >
+                                <div class="col-sm-2"> <a class="thumbnail" href="{{myvar}}">
+                                    <img src="{{x.imageUrl}}"></a>
+                                    <div class="featured">Featured</div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h3><a class="title" href="{{myvar}}">{{x.title}} </a></h3>
+                                    <ul class="icondetail">
+                                        <li>
+                                            <i class="fa fa-map-marker"></i>
+                                            <a>{{x.postedBy.geoLocation.address}}</a>
+                                        </li>
+                                        <li>
+                                            <i class="	fa fa-clock-o"></i>
+                                            <a>{{x.availability | showAvailabilityFilter}}</a>
+                                        </li>
+
+                                        <li><i class="fa fa-th-list"></i>
+                                            <a ng-repeat="y in x.courses">{{y.text}} <span ng-hide="$last">,&nbsp;</span></a>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-user"></i>
+                                            <a href="{{userLink}}">{{x.postedBy.name}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </li>
+                        </ul>
+                        <!-- Paging-->
+                        <div>
+                            <ul uib-pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize"
+                                class="pagination-sm pull-right" boundary-links="true"
+                                items-per-page="itemsPerPage"></ul>
+
+                            <div>
+                                Show <select ng-model="viewby" ng-change="setItemsPerPage(viewby)" convert-to-number>
+                                <option value="6">6 items per page</option>
+                                <option value="9">9 items per page</option>
+                                <option value="12">12 items per page</option>
+                                <option value="15">15 items per page</option>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listing-->
+                <!--<div class="mt40" id="serchlist">
+                    <div class="searchresult grid" style="display: block;">
+                        <ul class="mt30 clearfix row">
+                            <li class="clearfix"
+                                ng-repeat="x in tutions.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))"
+                                ng-init="myvar ='#/tutionDetail/'+ x._id; userLink = '#/viewProfile/'+ x.postedBy._id"
+                            >
+                                <div class="col-sm-2"> <a class="thumbnail" href="{{myvar}}">
+                                    <img src="{{x.imageUrl}}" alt=""></a>
+                                    <div class="featured">Featured</div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h3><a class="title" href="#">Ad Title </a></h3>
+                                    <ul class="icondetail">
+                                        <li><i class="fa fa-map-marker"></i> Location : Islamabad</li>
+                                        <li><i class="	fa fa-clock-o"></i> Availibility : <a href="#">9am to 6pm</a></li>
+
+                                        <li><i class="fa fa-th-list"></i> Course : <a href="#">Calculus I</a></li>
+                                        <li><i class="fa fa-user"></i> Posted by : <a
+                                                href="{{userLink}}">{{x.postedBy.name}}</a></li>
+                                    </ul>
+                                </div>
+
+                            </li>
+                        </ul>
+                        &lt;!&ndash; Paging&ndash;&gt;
+                        <div>
+                            <ul uib-pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize"
+                                class="pagination-sm pull-right" boundary-links="true"
+                                items-per-page="itemsPerPage"></ul>
+
+                            <div>
+                                Show <select ng-model="viewby" ng-change="setItemsPerPage(viewby)" convert-to-number>
+                                <option value="6">6 items per page</option>
+                                <option value="9">9 items per page</option>
+                                <option value="12">12 items per page</option>
+                                <option value="15">15 items per page</option>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+</div>
