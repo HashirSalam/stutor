@@ -1,27 +1,32 @@
-var app = angular.module('stutor.tutionView', ["ui.router", 'ngFileUpload', "ui.bootstrap"]);
+var app = angular.module('stutor.tutionView', ["ui.router","ui.bootstrap"]);
 
-app.config([                        //Routing
+
+
+app.config([
     '$stateProvider',
     '$urlRouterProvider',
-    function($stateProvider, $urlRouterProvider) {
-        $stateProvider
-            .state('tutionView', {
-                url: '/tutionView', //url: '/bookView/:id'
-                templateUrl: "components/tutions/tutionView/tutionViewView.html",
-                controller: "tutionViewController",
-                controllerAs: "tutionViewCtrl",
-            });
+    function ($stateProvider, $urlRouterProvider) {
+        $stateProvider.state('stutor.tutionView', {
+            url: '/tutionView',
+            views: {
+                'side-menu21': {
+                    templateUrl:"components/tutions/tutionView/tutionViewView.html",
+                    controller: 'tutionViewController'
+                }
+            }
+        })
     }
 ]);
 
-app.controller('tutionViewController', ['$scope', '$http', '$location', 'Upload', "$stateParams", "auth", //Controller
-    function($scope, $http, $location, $upload, $stateParams, auth) {
+
+app.controller('tutionViewController', ['$scope', '$http', "$stateParams", "auth", //Controller
+    function($scope, $http, $stateParams, auth) {
         $scope.ad = {};
         $scope.error = "";
 
         $scope.tutionView = function() {
             //console.log(auth.getUserID());
-            $http.get('api/adTutionView/' + auth.getUserID(), $scope.ad)
+            $http.get('http://127.0.0.1:3000/api/adTutionView/' + auth.getUserID(), $scope.ad)
                 .success(
                     function(data) {
                         //console.log(data.postedBy.name) ;

@@ -1,16 +1,23 @@
+<ion-view title="View Ad" id="page5" style="" class="">
+  <ion-nav-title>
+    <!-- <img src="img/icon.png" width="30px" height="30px" > -->
+    <view-title><i class="icon ion-ios-compose"></i> View Ad</view-title>
+  </ion-nav-title>
+
+ <ion-content padding="true" class="has-header">
+
 <div id="maincontainer">
     <div class="container">
         <!--  breadcrumb -->
-        <ul class="breadcrumb">
+        <!--<ul class="breadcrumb">
             <li> <a>My Account</a> </li>
             <li class="active">Listing</li>
-        </ul>
-        <a href="#/tutionPost" class="postadinner"><span> <i class="fa fa-pencil"></i> Post An Ad</span></a>
-        <div class="row mt40">
+        </ul>-->
+        <!--<a href="#/tutionPost" class="postadinner"><span> <i class="fa fa-pencil"></i> Post An Ad</span></a>
+        <div class="row mt40">-->
 
             <!--  Sideabar -->
-            <aside class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <!--My Account-->
+            <!--<aside class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                 <div class="sidemodule">
                     <h2 class="heading5"><span class="maintext"> My Account</span></h2>
                     <ul class="nav nav-list categories">
@@ -29,7 +36,7 @@
                         <li> <a href="#/logout">Logout</a></li>
                     </ul>
                 </div>
-            </aside>
+            </aside>-->
             <!--  Container -->
             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 mt40column">
                 <!--Sorting-->
@@ -66,7 +73,7 @@
                                     <h3><a class="title" href="{{title}}">{{x.title}} </a></h3>
                                     <ul class="icondetail">
                                         <li><i class="fa fa-map-marker"></i> Location : {{x.postedBy.geoLocation.address}}</li>
-                                        <li><i class="fa fa-th-list"></i> Availibility : <a href="#">{{x.availability | showAvailabilityFilter}}</a></li>
+                                        <li><i class="fa fa-th-list"></i> Availibility : <a href="#">{{x.availability}}</a></li>
 
                                         <li><i class="fa fa-th-list"></i> Course : <a ng-repeat="y in x.courses">{{y.text}},&nbsp;</a></li>
                                         <li><i class="fa fa-user"></i> Posted by : <a>{{x.postedBy.name}}</a></li>
@@ -80,12 +87,13 @@
 
                         </ul>
                         <!-- Paging-->
-                        <div>
-                            <div class="pull-right">
-                                View <select ng-model="viewby" convert-to-number ng-change="setItemsPerPage(viewby)"><option>3</option><option>5</option><option>10</option><option>20</option><option>30</option><option>40</option><option>50</option></select> records at a time.
-                            </div>
-                            <!--<pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" ></pagination>-->
+                         <div class="pull-right">
+                            
+                           
                             <ul uib-pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" items-per-page="itemsPerPage"></ul>
+                       
+                            <br>View <select ng-model="viewby" convert-to-number ng-change="setItemsPerPage(viewby)"><option>3</option><option>5</option><option>10</option><option>20</option><option>30</option><option>40</option><option>50</option></select> records at a time.
+                            
                         </div>
 
                     </div>
@@ -96,5 +104,8 @@
     <!-- Social-->
 
 
-    <!-- Got to top -->
-    <a id="gotop"><i class="fa fa-arrow-circle-up"></i></a> </div>
+
+
+      </ion-content>
+
+</ion-view>

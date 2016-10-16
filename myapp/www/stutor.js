@@ -1,10 +1,12 @@
 var app = angular.module('stutor',
     [	
 		"ionic",
+        "ui.bootstrap",
         "stutor.login",
         "stutor.home",
         "stutor.register",
         "stutor.tutionPost",
+        "stutor.tutionView",
     ]
 );
 
@@ -85,14 +87,14 @@ app.factory('auth', ['$http', '$window', function ($http, $window) {
     };
 
     auth.register = function (user) {
-        return $http.post('/register', user).success(function (data) {
+        return $http.post('http://127.0.0.1:3000/api/register', user).success(function (data) {
             auth.saveToken(data.token);
             auth.saveUserID(data.userId);
         });
     };
 
     auth.logIn = function (user) {
-        return $http.post('http://192.168.137.1:3000/login', user).success(function (data) {
+        return $http.post('http://127.0.0.1:3000/api/login', user).success(function (data) {
             auth.saveToken(data.token);
             auth.saveUserID(data.userId);
         });
@@ -108,12 +110,25 @@ app.factory('auth', ['$http', '$window', function ($http, $window) {
 
 
 
-app.controller('SearchWidgetController', function ($location) {
-    var controller = this;
-    controller.search = {text: "", city: "all"};
-    controller.searchNow = function (search) {
-        //console.log("dads");
-        $location.path("/search/" + search.text + "/" + search.city);
-        controller.search.text = "dsada";
+app.controller('SearchWidgetController', function ($scope,$rootScope,$location,$http) {
+    var ctrl = this;
+    ctrl.search = {text: "", type: "both", city: "all"};
+    ctrl.searchNow = function (search) {
+      $location.path('/home');
+      console.log('execution contiues');
+      $http.get('http://127.0.0.1:3000/api/tutionSearch?searchOptions=' +  JSON.stringify(ctrl.search))
+          .success(
+              function (data) {
+                console.log(data);
+                $rootScope.$emit('searchOutput', data);
+              }
+          )
+          .error(
+              function (response) {
+                  alert("ERROR  TUTION SEARCH :" + response["message"]);
+              }
+          );
     }
+
+
 });
