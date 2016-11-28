@@ -7,6 +7,9 @@ var app = angular.module('stutor',
         "stutor.register",
         "stutor.tutionPost",
         "stutor.tutionView",
+        "stutor.tutionDetail",
+        "stutor.pendingreviews",
+        
     ]
 );
 

@@ -32,11 +32,12 @@ app.controller('tutionPostController', ['$scope', '$http', '$location', 'Upload'
             }
             else {
                 $upload.upload({
-                    url: '/api/adPost',
+                    url: 'http://127.0.0.1:3000/api/adPost',
                     method: 'POST',
                     data: {file: $scope.adImg, ad: $scope.ad, userId: auth.getUserID()}  //file: contains image , ad : contains ad information , userID :contains user info
 
                 }).then(function (resp) {
+                    alert("AD posted Successfully !")
                     $location.url("/tutionDetail/" + resp.data._id);  //redirects to detail page along with ad ID
                 }, function (response) {
                     $scope.error = response.data.message;

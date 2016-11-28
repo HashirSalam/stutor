@@ -1,0 +1,63 @@
+<ion-view title="Pending Reviews" id="page5" style="" class="">
+  <ion-nav-title>
+    <!-- <img src="img/icon.png" width="30px" height="30px" > -->
+    <view-title><i class="icon ion-ios-compose"></i> Pending Reviews</view-title>
+  </ion-nav-title>
+
+
+
+<ion-content padding="true" class="has-header">
+<div id="maincontainer">
+    <div class="container">
+        <!--  breadcrumb -->
+        <!--<ul class="breadcrumb">
+            <li><a>My Account</a> </li>
+            <li class="active"> Dashboard</li>
+        </ul>-->
+        <a href="#/tutionPost" class="postadinner"><span> <i class="fa fa-pencil"></i> Post An Ad</span></a>
+        <div class="row mt40">
+            <!--  Sideabar -->
+            <aside class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <!--My Account-->
+                <div class="sidemodule">
+                    <!--<h2 class="heading5"><span class="maintext"> My Account</span></h2>
+                    <ul class="nav nav-list categories">
+                        <li> <a href="#/dashboard">Dashboard</a> </li>
+                        <li> <a href="#/editprofile">Edit Profile </a></li>
+                        <li> <a href="#/tutionPost">Post An Ad</a> </li>
+                        <li> <a href="#/tutionView">View My Ads</a> </li>
+                        <li> <a href="#/bookPost">Donate A Book</a>
+                            <ul class="nav nav-list">
+                                <li><a href="#/bookSearch">Search A Book</a></li>
+                                <li><a href="#/bookPost">Post A Book</a></li>
+                                <li><a href="#/bookView">View My Books</a></li>
+                            </ul>
+                        </li>
+                        <li> <a href="#/transactionHistory">My Transactions</a></li>
+                        <li> <a href="#/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </aside> -->
+            <!--  Container -->
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt40column">
+                <h2 class="heading5"><span class="maintext"> Pending Reviews</span></h2>
+                <div class="alert alert-danger" ng-hide="userPendingReviews.length > 0">
+                    <strong>0 Pending Reviews</strong>
+                </div>
+
+                <div class="alert alert-warning" ng-repeat="x in userPendingReviews">
+                    <span class="pull-right">
+                        <button class="btn btn-orange" ng-click="reviewResult(x,'approved')">Yes</button>
+                        <button class="btn" ng-click="reviewResult(x,'rejected')">No</button>
+                    </span>
+                    {{x.postedBy.name}} posted a review on your profile.
+                    <strong>Is he/she your student?</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </ion-content>
+	
+</ion-view>

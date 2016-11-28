@@ -1,17 +1,23 @@
 var app = angular.module('stutor.tutionDetail', ["ui.router", 'ngRating']);
 
-app.config([              //Routing
+
+    app.config([
     '$stateProvider',
     '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
-        $stateProvider
-            .state('tutionDetail', {
-                url: '/tutionDetail/:id',
-                templateUrl: "components/tutions/tutionDetail/tutionDetailView.html",
-                controller: "tutionDetailController",
-                controllerAs: "tutionDetailCtrl",
-            });
-    }]);
+        $stateProvider.state('stutor.tutionDetail', {
+            url: '/tutionDetail/:id',
+            views: {
+                'side-menu21': {
+                    templateUrl:'components/tutions/tutionDetail/tutionDetailView.html',
+                    controller: 'tutionDetailController'
+                }
+            }
+        })
+    }
+]);
+
+
 
 app.filter('showAvailabilityFilter', function () {
     function timeTo12HrFormat(hr) {
