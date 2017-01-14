@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* ------------ Reset ------------ */
 
 body { font-family: 'Open Sans', arial, sans-serif; color: #96979d; font-size: 13px; margin: 0px; padding: 0px; line-height: normal; }
@@ -159,7 +159,7 @@ ul.steps li div.step { border: 1px solid #ddd; padding: 0 10px; font-size: 18px;
 ul.steps li div.step span.stepcount { background: #999999; height: 30px; width: 30px; line-height: 30px; text-align: center; color: #fff; margin-right: 10px; display: inline-block }
 ul.steps li div.step i { color: #ea3a44; line-height: 47px; display: inline-block; font-size: 40px }
 /*Search*/
-#search { height: 300px; background: #ccc url(../img/cover2.jpg) center center no-repeat; display: block; position: relative }
+#search { height: 100px; background: #fff url(../img/logo.png) center center no-repeat; display: block; position: relative }
 #searchinner { background: #666; display: block; position: relative; padding: 10px 10px 43px 0; width: auto; margin-bottom: 40px }
 #searchinner .searchcontianer { margin: 0 auto; padding: 15px; background: none; border: none }
 #search:after, .searchcontianer:after { clear: both; content: ''; display: block }

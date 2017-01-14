@@ -7,112 +7,125 @@
 
 
   <ion-content padding="true" class="has-header">
-    <div id="maincontainer">
-      <div class="container">
-
-        <ul class="breadcrumb">
-          <li> <a ui-sref="stutor.home">Home</a> </li>
-          <li class="active">Register</li>
-        </ul>
-        <div class="mt40">
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <h5 class="heading5">Register</h5>
-            <div class="loginbox">
-              <form ng-submit="register()" class="form-vertical" novalidate>
-          
-
-                  <div class="list">
-
-                    <label class="item item-input item-stacked-label">
-                    <span class="input-label">Full Name</span>
-                    <input type="text" ng-model="user.name" placeholder="Full Name" required>
+ <div id="maincontainer">
+  <div class="container"> 
+    <!--  breadcrumb -->
+    
+    <div class="mt40 row">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <h5 class="heading5">Register</h5>
+        <div class="loginbox">
+		
+          <form ng-submit="register()" class="form-vertical" novalidate>
+            <fieldset>
+                
+              <div class="control-group">
+                <label  class="control-label">Full Name:</label>
+                <div class="controls">
+                  <label class="item item-input">
+                  <input type="text" ng-model="user.name" required>
                   </label>
+                </div>
+              </div>
+         
 
-                    <label class="item item-input item-stacked-label">
-                    <span class="input-label">Email</span>
-                    <input type="email" ng-model="user.email" placeholder="Email" required>
+              <div class="control-group">
+                <label  class="control-label">E-Mail Address:</label>
+                <div class="controls">
+                  <label class="item item-input">
+                  <input type="text" ng-model="user.email" required>
+                </div>
+                </label>
+              </div>
+
+              <div class="control-group">
+                <label  class="control-label">Mobile Number:</label>
+                <div class="controls">
+                  <label class="item item-input">
+                  <input type="text" ng-model="user.mobile" maxlength="11" placeholder="e.g 0333xxxxxxx" required >
                   </label>
+                </div>
+              </div>
 
-                    <label class="item item-input item-stacked-label">
-                    <span class="input-label">Password</span>
-                    <input type="password" ng-model="user.password" placeholder="Password" required>
+              <div class="control-group">
+                <label  class="control-label">Password:</label>
+                <div class="controls">
+                  <label class="item item-input">
+                  <input type="password" ng-model="user.password" required>
                   </label>
+                </div>
+              </div>
+              
+			        <div class="control-group">
+                <label  class="control-label">Confirm Password:</label>
+                <div class="controls">
+                  <label class="item item-input">
+                  <input type="password" ng-model="user.confirmPassword" required>
+                </label>
+                </div>
+              </div>
 
-                    <label class="item item-input item-stacked-label">
-                    <span class="input-label">Confirm Password</span>
-                    <input type="password" ng-model="user.confirmPassword" placeholder="Confirm Password" required>
-                  </label>
-
-                    <div class="well">
-                      <label class="item item-input item-stacked-label">
-                    <span class="input-label">Date of Birth</span>
-                          <input type="text" id="datepicker" datepicker ng-model="user.dob" placeholder="Date of Birth" required>
-                  </label>
-                    </div>
-
-                    <label class="item item-input">
-                    <span class="input-label">You are :</span>
-                        <select ng-model="user.role"  required>
+              <div class="well"> 
+              
+              <div class="control-group">
+                <label  class="control-label">Date of Birth:</label>
+                <div class="controls">
+                  <!--<datepicker date-format="d/M/y">
+                    <input type="text" datepicker ng-model="user.dob" required>
+                  </datepicker>-->
+                  <input type="date" 
+                         ng-model="user.dob" 
+                         ng-required="true" close-text="Close"/>   
+                </div>
+                
+              </div>
+              
+            </div>
+            
+                <div class="control-group">
+                    <label class="control-label">You are a:</label>
+                    <div class="controls">
+                        <select ng-model="user.role" required>
                             <option value="teacher">Teacher</option>
                             <option value="student">Student</option>
                         </select>
+                    </div>
+                </div>
+
+              <div class="control-group">
+                <label  class="control-label">Class:</label>
+                <div class="controls">
+                  <label class="item item-input">
+                  <input type="text" ng-model="user.class" placeholder="Matric , Fsc " required>
                   </label>
+                </div>
+              </div>
 
+              <div class="control-group">
+                <div class="">
+                  <input type="checkbox" ng-model="user.agreedOnTerms" style="width:5%" required>I agree to Stutor <a href="#/terms">Terms & Conditions</a>
+                </div>
+              </div>
 
+              <div class="errormsg alert" ng-show="error">
+                <strong>Error!</strong> {{error}}
+              </div>
 
+              <div class="successmsg alert" ng-show="success">
+                <strong>Registered Successsfully !</strong> {{success}}
+              </div>
 
-                    <ion-checkbox ng-model="user.agreedOnTerms">I agree to Stutor <a href="#/terms"> Terms & Conditions</a></ion-checkbox>
-
-
-
-
-
-
-                  </div>
-
-
-
-
-
-
-
-                  <div class="errormsg alert" ng-show="error">
-                    <i class="fa fa-frown-o font36"></i>
-                    <strong>Error!</strong> {{error}}
-                  </div>
-
-                  <br>
-                  <button type="submit" class="btn btn-orange button-full ">Register</button>
-          
-
-              </form>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-
-
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <div class="loginbox">
-              <hr>
-              <h5 class="heading5"> Why Us</h5>
-              <p>By creating an account you will be able to find ads faster, be up to date with your account, and keep track
-                of the ads you have previously posted.</p>
-              <ul class="whyus">
-                <li><i class="fa  fa-magic"></i> <span class="direname">Easy to Understand</span> </li>
-                <li><i class="fa fa-arrow-right"></i> <span class="direname">Fast to Navigate</span> </li>
-                <li><i class="fa fa-th"></i> <span class="direname">Lot of Options</span> </li>
-                <li><i class="fa fa-search"></i><span class="direname">Quick Search</span> </li>
-              </ul>
               <br>
-              <br>
-              <a href="#/login" class="btn btn-orange">Login</a> </div>
-          </div>
+              <button type="submit" class="btn btn-orange">Register</button>
+            </fieldset>
+          </form>
+
         </div>
       </div>
+
     </div>
+  </div>
+</div>
   </ion-content>
 
 </ion-view>

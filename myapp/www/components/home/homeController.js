@@ -23,7 +23,7 @@ app.controller('homeController', ['$scope', 'auth', '$location','$rootScope','$h
 
                 $scope.leaders = [];
 
-        $http.get('http://192.168.137.1:3000/api/getTopTeachers').success(function(data){
+        $http.get('http://www.stutor.pk/api/getTopTeachers').success(function(data){
           $scope.leaders = data;
 
         }).error(function(msg){

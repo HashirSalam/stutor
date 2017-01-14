@@ -27,7 +27,7 @@ app.controller('LoginController', ['$scope', 'auth', '$location',
                 $scope.error = error["message"];
             }).then(function () {
                 //$state.go('home');
-                alert("Success");
+                $scope.success = "!";
                 $location.path("/successlogin");
                             });
         };

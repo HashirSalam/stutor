@@ -8,39 +8,46 @@
 
 <ion-content padding="true" class="manual-ios-statusbar-padding">
 
-<!-- Slider Start-->
 <section id="search">
 
-    <div class="container">
+
+</section>
+
+
+
+    <div class="container col-lg-10 col-md-10 col-sm-12 col-xs-12">
         <div class="searchcontianer">
+
             <h1 class="heading1">Search for experienced teachers from all over the world. <span class="orange">Stutor.pk </span> </h1>
             <form name="SearchWidgetForm" class="form-inline" ng-controller="SearchWidgetController as SearchWidgetCtrl" ng-submit="SearchWidgetForm.$valid && SearchWidgetCtrl.searchNow(SearchWidgetCtrl.search)" novalidate>
                 <div class="btn-group">
                     <input type="search" ng-model="SearchWidgetCtrl.search.text" placeholder="Search Here" class="form-control mainserarch" required>
-                    
                     <select class="category" ng-model="SearchWidgetCtrl.search.type">
                         <option value="both">Select Type</option>
                         <option value="students">Students</option>
                         <option value="tutors">Tutors</option>
                     </select>
-
                     <select class="category" ng-model="SearchWidgetCtrl.search.city">
                         <option value="all">Select City</option>
                         <option value="islamabad">Islamabad</option>
                         <option value="rawalpindi">Rawalpindi</option>
                         <option value="lahore">Lahore</option>
                     </select>
-                  
+                    <br><br>
                     <input type="submit" value="Search" class="btn btn-orange tooltip-test mainserarchsubmit">
                 </div>
             </form>
         </div>
-    </div>
-</section>
+     </div>
+  
+ <!--</section>--> 
+
+
+        
 
 
 
-<div id="maincontainer">
+<div id="maincontainer" class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
     <!-- Slider End-->
     <!-- Added by Uzair Ghauri @ 2016-09-01 16:19:00 -->
         <div class="mt40 col-md-8 col-md-offset-2" id="serchlist" ng-show="ad.length>0">
@@ -84,31 +91,33 @@
     <div style="clear:both">
 
     </div>
+    
+    
     <!-- SEO Line-->
-    <div class="container mt20">
+    <!--<div class="container mt20">
         <div class="seodetails">
-            <h2 class="heading2"> Start Learning   -   3 Easy Steps</h2>
-            <p class="metadetails"> Stutor allows you to learn anything, anywhere. Offering you experienced teachers from all over the world, providing interactive learning on flexible timings. Getting your dream education was never this easy.</p>
+            <h2 class="heading2"> Start Learning- 3 Easy Steps</h2>
+
         </div>
     </div>
-    <!-- Steps-->
-    <!--<div class="container">
+    
+    <div class="container">
         <div class="row">
             <ul class="steps">
-                <li class="col-sm-4">
+                <li class="col-sm-3">
                     <div class="step"><span class="stepcount">1</span><span>Select Course</span> <i class="fa fa-check-square-o pull-right"></i></div>
                 </li>
                 <li class="col-sm-4">
                     <div class="step"><span class="stepcount">2</span><span>Select Experience Level</span> <i class="fa fa-edit pull-right"></i></div>
                 </li>
-                <li class="col-sm-4">
+                <li class="col-sm-3">
                     <div class="step"><span class="stepcount">3</span><span>Select Time</span> <i class="fa fa-credit-card pull-right"></i></div>
                 </li>
             </ul>
         </div>
-    </div>-->
-    <!-- Services-->
-    <!--<div class="container mt40" id="maincategory">
+    </div>
+    
+    <div class="container mt40" id="maincategory">
         <ul class="maincategory row">
 
             <li> <a href="listing.html"><i class="fa fa-briefcase c1"></i> <br>
@@ -127,78 +136,57 @@
                 <span class="direname">Biology</span></a> </li>
             <li> <a href="listing.html"><i class="fa fa-book c8"></i> <br>
                 <span class="direname">Chemistry</span></a> </li>
-            <li> <a href="listing.html"><i class="fa fa-book c9"></i> <br>
-                <span class="direname">Mathematics</span></a> </li>
-            <li> <a href="listing.html"><i class="fa fa-book c10"></i> <br>
-                <span class="direname">Calculus I</span></a> </li>
-            <li> <a href="listing.html"><i class="fa fa-book c11"></i> <br>
-                <span class="direname">Calculus II</span></a> </li>
-            <li> <a href="listing.html"><i class="fa fa-book c12"></i> <br>
-                <span class="direname">ICT</span></a> </li>
+
         </ul>
         <div class="clearfix"></div>
-        <a id="prevcat" class="prevcarousal" href="#">Previous</a> <a id="nextcat" class="nextcarosal">Next</a> </div>-->
+        -->
+        <!--<a id="prevcat" class="prevcarousal" href="#">Previous</a> <a id="nextcat" class="nextcarosal">Next</a> </div>-->
+
+
     <!-- Directory Listing-->
     <div class="container mt40">
-        <h2 class="heading3">Course Listing</h2>
-        <div class="mt40">
-            <ul class="row clearfix">
-                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+      
+        <!--<div class="mt40">
 
-                    <section class="directorylist">
-                        <div><i class="fa fa-desktop"></i><span class="directorytitle">O/A Levels </span></div>
-                        <ul class="list">
-                            <li><a href="listing.html">Accounting</a></li>
-                            <li><a href="listing.html">Add Math</a></li>
-                            <li><a href="listing.html">Business Studies</a></li>
-           
-                        </ul>
+                <!--Subject-->
+                <div class="sidemodule">
+                    <h2 class="heading5"><span class="maintext"> Search Filters</span></h2>
+                    
+
+                </div>
+                <div class="sidemodule">
+                    <h2 class="heading5"><span class="maintext"> Tution Method</span></h2>
+                      <input type="radio" name="method" value=""> <b>Home tution</b><br>
+                      <input type="radio" name="method" value=""> <b>Private Tution</b><br>
+                      <input type="radio" name="method" value=""> <b>Group Tutuion</b>
+                </div>
+               
+               <div class="sidemodule">
+                    <h2 class="heading5"><span class="maintext"> Classes</span></h2>
+                      <input type="text" name="class" value="" placeholder="Enter class name"><br>
+                </div>   
+
+               <div class="sidemodule">
+                    <h2 class="heading5"><span class="maintext"> Courses</span></h2>
+                      <input type="text" name="course" value="" placeholder="Enter course name"><br>
+                </div>  
+
+                
+                    <!--<section id="main">
+                        <input id="defaultSlider1" ng-model="searchOptions.range" type="range" min="{{minDistance}}"
+                               max="{{maxDistance}}">
+                        <p class="note">From: <span id="currentValue1">{{searchOptions.range}}</span> A.M</p>
+                        
+
+                         <input id="defaultSlider2" ng-model="searchOptions.range" type="range" min="{{minDistance}}"
+                               max="{{maxDistance}}">
+                        <p class="note">To: <span id="currentValue2">{{searchOptions.range}}</span> P.M</p>
+                        <button type="button" class="pull-right" ng-click="searchBooks()">Search</button>
                     </section>
 
-
-
-
-                </li>
-
-                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <section class="directorylist">
-                        <div><i class="fa fa-briefcase"></i><span class="directorytitle">Matric</span></div>
-                        <ul class="list">
-                            <li><a href="listing.html">Maths</a></li>
-                            <li><a href="listing.html">Physics</a></li>
-                            <li><a href="listing.html">Chemistry</a></li>
-           
-                        </ul>
-                    </section>
-
-                </li>
-                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <section class="directorylist">
-                        <div><i class="fa fa-legal"></i><span class="directorytitle">B.Com/I.Com</span></div>
-                        <ul class="list">
-                            <li><a href="listing.html">Business Statistic & Mathematics</a></li>
-                            <li><a href="listing.html">Computer Application in Business</a></li>
-                            <li><a href="listing.html">Boats & Watercraft</a></li>
-                 
-                        </ul>
-                    </section>
-
-                </li>
-                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-
-                    <section class="directorylist ">
-                        <div><i class="fa fa-book"></i><span class="directorytitle">FSc</span></div>
-                        <ul class="list">
-                            <li><a href="listing.html">Mathematics</a></li>
-                            <li><a href="listing.html">Physics</a></li>
-                            <li><a href="listing.html">Chemistry</a></li>>
-
-                        </ul>
-                    </section>
-                </li>
-            </ul>
-        </div>
+        </div>-->
     </div>
+
     <!-- Top Tutors-->
     <div class="container mt40">
         <h2 class="heading3">Top Tutors</h2>

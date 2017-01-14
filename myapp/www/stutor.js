@@ -90,14 +90,15 @@ app.factory('auth', ['$http', '$window', function ($http, $window) {
     };
 
     auth.register = function (user) {
-        return $http.post('http://127.0.0.1:3000/api/register', user).success(function (data) {
+       // return $http.post('http://127.0.0.1:3000/api/register', user).success(function (data) {
+           return $http.post('http://www.stutor.pk/api/register', user).success(function (data) {
             auth.saveToken(data.token);
             auth.saveUserID(data.userId);
         });
     };
 
     auth.logIn = function (user) {
-        return $http.post('http://127.0.0.1:3000/api/login', user).success(function (data) {
+        return $http.post('http://www.stutor.pk/api/login', user).success(function (data) {
             auth.saveToken(data.token);
             auth.saveUserID(data.userId);
         });
@@ -119,7 +120,7 @@ app.controller('SearchWidgetController', function ($scope,$rootScope,$location,$
     ctrl.searchNow = function (search) {
       $location.path('/home');
       console.log('execution contiues');
-      $http.get('http://127.0.0.1:3000/api/tutionSearch?searchOptions=' +  JSON.stringify(ctrl.search))
+      $http.get('http://www.stutor.pk/api/tutionSearch?searchOptions=' +  JSON.stringify(ctrl.search))
           .success(
               function (data) {
                 console.log(data);

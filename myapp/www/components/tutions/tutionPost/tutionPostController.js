@@ -32,7 +32,7 @@ app.controller('tutionPostController', ['$scope', '$http', '$location', 'Upload'
             }
             else {
                 $upload.upload({
-                    url: 'http://127.0.0.1:3000/api/adPost',
+                    url: 'http://www.stutor.pk/api/adPost',
                     method: 'POST',
                     data: {file: $scope.adImg, ad: $scope.ad, userId: auth.getUserID()}  //file: contains image , ad : contains ad information , userID :contains user info
 

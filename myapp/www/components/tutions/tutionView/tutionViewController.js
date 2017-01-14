@@ -26,7 +26,7 @@ app.controller('tutionViewController', ['$scope', '$http', "$stateParams", "auth
 
         $scope.tutionView = function() {
             //console.log(auth.getUserID());
-            $http.get('http://127.0.0.1:3000/api/adTutionView/' + auth.getUserID(), $scope.ad)
+            $http.get('http://www.stutor.pk/api/adTutionView/' + auth.getUserID(), $scope.ad)
                 .success(
                     function(data) {
                         //console.log(data.postedBy.name) ;

@@ -42,8 +42,8 @@ app.controller('registerController', ['$scope', 'auth', '$location',
                 auth.register($scope.user).error(function (error) {
                     $scope.error = error["message"];
                 }).then(function () {
-                    //$scope.error = "DOne!";
-                    $location.path("/edit-profile");
+                    $scope.success = "!";
+                    //$location.path("/edit-profile");
                 });
             }
         };
